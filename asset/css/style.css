@@ -1,0 +1,33 @@
+.bg-img{
+background-image: url(../img/bus3.jpg);
+background-repeat: no-repeat;
+background-position: center; 
+background-color: lightslategray;
+max-width: 100%;
+height: auto;
+}
+.cbg-img{
+    background-image: url(../img/bus4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: lightslategray;
+    max-width: 100%;
+    height: auto;   
+}
+.title{
+    text-align: center;
+    margin-top: 5px;
+    background-color: #FFFFCC;
+}
+form{ 
+
+   background-color: #FFFFCC;
+   margin: 5px;
+   padding: 5px ;
+   box-shadow: 5px #808080;
+}
+table{
+    background-color:hwb(0 99% 1%) ;
+    align-content: center;
+}
+
