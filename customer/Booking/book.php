@@ -20,12 +20,19 @@
             </div>
                 <div class="mb-3">
                  <label for="csource" class="form-label">Source:</label>
-                 <input type="text" class="form-control" id="csouece" name="csouece" value="<?php echo $res['c_password'];?>" required>
-                </div>
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="">
+                        <option>hello</option>
+                        <option>hi</option>
+                        <option>busy</option>
+                      </select>
                 <div class="mb-3">
                  <label for="cdestination" class="form-label">Destination:</label>
-                 <input type="text" class="form-control" id="cdestination" name="cdestination" value="<?php echo $res['address']; ?>" required>
-                </div>
+                 <label for="">Sourece</label>
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="">
+                        <option>hello</option>
+                        <option>hi</option>
+                        <option>busy</option>
+                      </select>
                 <div class="mb-3">
                  <label for="cseat" class="form-label">Seat Number:</label>
                  <input type="number" class="form-control" id="cseat" name="cseat" min="1" max="30" value="<?php echo $res['address']; ?>" required>
