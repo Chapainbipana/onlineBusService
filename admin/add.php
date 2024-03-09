@@ -43,11 +43,11 @@
           </li><li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Account
+              Root
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="login.php">login</a></li>
-              <li><a class="dropdown-item" href="register.php">Register</a></li>
+              <li><a class="dropdown-item" href="./../root/root.php">Add Root</a></li>
+              <li><a class="dropdown-item" href="register.php">Root Display</a></li>
             </ul>
           </li>
           
