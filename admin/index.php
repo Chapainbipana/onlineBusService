@@ -45,7 +45,7 @@
               Root
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Add Root</a></li>
+              <li><a class="dropdown-item" href="../root/addroot.php">Add Root</a></li>
               <li><a class="dropdown-item" href="#">Display Root</a></li>
             </ul>
           </li>

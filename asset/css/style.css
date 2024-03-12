@@ -30,4 +30,6 @@ table{
     background-color:hwb(0 99% 1%) ;
     align-content: center;
 }
-
+nav{
+    position: sticky;
+}

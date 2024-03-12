@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="asset/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <title>Online Bus Service</title>
     <style>
       </style>
@@ -46,8 +46,8 @@
               Root
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="./../root/root.php">Add Root</a></li>
-              <li><a class="dropdown-item" href="register.php">Root Display</a></li>
+              <li><a class="dropdown-item" href="./../root/addroot.php">Add Root</a></li>
+              <li><a class="dropdown-item" href="./../root/root.php">Root Display</a></li>
             </ul>
           </li>
           

@@ -13,7 +13,7 @@
             $_SESSION['c_name']=$uname;
             $_SESSION['c_password']=$password;
             //echo $res['c_name'];
-            header("location:index.php");
+            header("location:../index.php");
            //echo$_SESSION['c_name'].",".$_SESSION['c_password'];
 
         }

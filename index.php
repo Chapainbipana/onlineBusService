@@ -36,7 +36,7 @@
               Book ticket 
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="Booking/book.php">Book Ticket</a></li>
+              <li><a class="dropdown-item" href="customer/Booking/book.php">Book Ticket</a></li>
               <li><a class="dropdown-item" href="busdisplay.php">Root details</a></li>
               
             </ul>
@@ -46,15 +46,15 @@
               Account
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="login.php">login</a></li>
-              <li><a class="dropdown-item" href="register.php">Register</a></li>
+              <li><a class="dropdown-item" href="customer/login.php">login</a></li>
+              <li><a class="dropdown-item" href="customer/register.php">Register</a></li>
             </ul>
           </li>
           
         </ul>
         <form class="d-flex">
           
-          <button class="btn btn-outline-dark"><a href="logout.php">logout</a></button>
+          <button class="btn btn-outline-dark"><a href="customer/logout.php">logout</a></button>
         </form>
       </div>
     </div>
@@ -91,6 +91,6 @@
 <?php
      }
   else{
-    header('location:login.php');
+    header('location:customer/login.php');
   }
   ?>
