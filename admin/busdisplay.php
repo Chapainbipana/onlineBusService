@@ -77,7 +77,9 @@
                     </tr>
                 </tbody>
                 <?php 
-   	   }?>
+   	   }
+        mysqli_close($connection);
+       ?>
             </table>
         </div>
     </div>

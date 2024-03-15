@@ -67,14 +67,7 @@
         </div>
         <div class="col-lg-6 col-12">
           <h1>About</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A laboriosam ab doloremque
-          neque, reiciendis omnis recusandae repellat, ex sapiente nobis quis nisi delectus incidunt et repudiandae
-          maxime quaerat est tempora distinctio vitae! At aliquam consequuntur corrupti ea, neque harum beatae eligendi
-          fuga itaque magnam, cumque ullam ab dignissimos assumenda, sed voluptatem? Harum odio, expedita sapiente
-          laborum esse quisquam aperiam praesentium! Quae harum facilis voluptatem unde et nulla officiis. Eligendi
-          error reiciendis quo quibusdam doloribus culpa officiis quod exercitationem a, velit soluta eum deleniti ad
-          recusandae eaque nostrum harum molestias pariatur excepturi, et debitis ipsam laboriosam. Consectetur
-          assumenda dolores at ea!</p>
+          <p>Buses are the most affordable means of transport with a large number of terminals across the country and convenient timetables to help you plan your trip. Buses is a convenient option both for those who travel on a shoestring budget and those who do not want to compromise on comfort. Dhaulagiri Yatayat offers bus service with an online reservation available. Before booking your ticket, read other travellers’ reviews to choose the best option.</p>
         </div>
       </div>
     </div>

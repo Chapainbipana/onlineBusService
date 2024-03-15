@@ -67,7 +67,7 @@
                 <div class="col lg-12 md-12">
                   <div class="container d-flex justify-content-around ">
                      <div class="row">
-                        <form action=" " method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
+                        <form action="contact.php" method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
                             <h1  class="align-center" aria-hidden="true">Ticket Booking</h1>
                            
                             <div class="mb-3">
@@ -99,11 +99,11 @@
                           </div>
                          <div class="mb-3">
                              <label for="cseat" class="form-label">Seat Number:</label>
-                             <input type="number" class="form-control" id="cseat" name="cseat" min="1" max="30" value="<?php echo $res['seatnumber']; ?>" required>
+                             <input type="number" class="form-control" id="cseat" name="cseat" min="1" max="30"  required>
                        </div>
                        <div class="mb-3">
                             <label for="cdate" class="form-label">Date :</label>
-                             <input type="date" class="form-control" id="cdate" name="cdate" min="1" max="30" value="<?php echo $res['date']; ?>" required>
+                             <input type="date" class="form-control" id="cdate" name="cdate"  required>
                           </div>
                 
                           <button type="submit" class="btn btn-primary" name="customereditsubmit" >Submit</button>

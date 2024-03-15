@@ -15,6 +15,7 @@
   else{
   	echo "error".$query."<br>".mysqli_error($connection);
   }
+  mysqli_close($connection);
 ?>
 <?php
 }

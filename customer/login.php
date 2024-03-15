@@ -17,7 +17,7 @@
             <form action="lvalue.php" method="post" class="p-5 m-5 " onsubmit=" return itsfunction()">
             <h1 class=" text-center">User</h1>
           <div class="mb-3">
-               <label for="username" class="form-label" >User Name</label>
+               <label for="username" class="form-label" > User Name</label>
                <input type="text" class="form-control" id="username" name="uname" required >
                 
           </div>

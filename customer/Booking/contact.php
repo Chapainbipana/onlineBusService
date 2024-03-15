@@ -18,22 +18,22 @@
                 <div class="col lg-12 md-12">
                 <div class="container d-flex justify-content-around ">
             <div class="row">
-             <form action=" " method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
+             <form action="transaction.php" method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
              <h1  class="align-center" aria-hidden="true">Contact Information</h1>
                 <div class="mb-3">
                     <input type="hidden" name="id" value="<?php echo $res['id']; ?>">
             </div>
                 <div class="mb-3">
                 <label for="c_name" class="form-label">Customer Name:</label>
-                <input type="text" class="form-control" id="c_name" name="cname" value="<?php echo $res['c_name']; ?>" required >
+                <input type="text" class="form-control" id="c_name" name="cname"  required >
                 </div>
                 <div class="mb-3">
                  <label for="cage" class="form-label">Age:</label>
-                 <input type="text" class="form-control" id="cage" name="cage"  pattern="[1-9]{2}" value="<?php echo $res['age']; ?>" required>
+                 <input type="text" class="form-control" id="cage" name="cage"  pattern="[1-9]{2}"  required>
                 </div>
                 <div class="mb-3">
                  <label for="cphone" class="form-label">Phone:</label>
-                 <input type="text" class="form-control" id="cphone" name="cphone" pattern="\d{10}" value="<?php echo $res['phone']; ?>" required>
+                 <input type="text" class="form-control" id="cphone" name="cphone" pattern="\d{10}"  required>
                 </div>
                 
                <button type="submit" class="btn btn-primary" name="customereditsubmit" >Submit</button>
