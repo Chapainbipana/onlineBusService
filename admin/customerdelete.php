@@ -5,8 +5,7 @@
  ?>
 
 <?php
-  include 'connection.php';
-  $c_id= $_GET['id'];
+ include("../db_conn/connection.php");
   $q = "DELETE FROM `customer_login` WHERE id='$c_id'";
   $query=mysqli_query($connection,$q);
   if ($query) {

@@ -77,7 +77,7 @@
             </thead>
             <?php 
             //$search=$_POST['search'];
-             include 'connection.php';
+            include("../db_conn/connection.php");
              $q="SELECT * FROM `customer_login`";
              $result=mysqli_query($connection,$q);
              while ($res=mysqli_fetch_assoc($result)){   

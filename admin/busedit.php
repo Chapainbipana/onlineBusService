@@ -4,7 +4,7 @@
  
 ?>
  <?php
-          include 'connection.php';
+         include("../db_conn/connection.php");
           $b_num= $_GET['b_number'];
           $q="SELECT * FROM `bus_info` where b_number='$b_num' ";
           $result=mysqli_query($connection,$q);

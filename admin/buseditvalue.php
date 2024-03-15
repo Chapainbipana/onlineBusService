@@ -4,7 +4,7 @@
 ?>
 <?php
   if (isset($_POST['editbus'])) {
-    include("connection.php");
+    include("../db_conn/connection.php");
     $b_num = trim($_POST['b_num']);
     $b_phone= trim($_POST['bphone']);
     $b_source = trim($_POST['b_source']);

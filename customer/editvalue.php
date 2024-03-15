@@ -3,7 +3,7 @@ session_start();
 ?>
 <?php
 if (isset($_POST['rsubmit'])) {
-    include("connection.php");
+    include("../db_conn/connection.php");
     $cid=trim($_POST['id']);
     $cname = trim($_POST['cname']);
     $cpassword = trim($_POST['cpassword']);

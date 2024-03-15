@@ -5,7 +5,7 @@
  ?>
 
 <?php
-  include 'connection.php';
+  include("../db_conn/connection.php");
   $b_num= $_GET['b_number'];
   $q = "DELETE FROM `bus_info` WHERE b_number='$b_num'";
   $query=mysqli_query($connection,$q);

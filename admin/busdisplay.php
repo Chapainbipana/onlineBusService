@@ -60,7 +60,7 @@
                     </tr>
                 </thead>
                 <?php
-             include 'connection.php';
+             include("../db_conn/connection.php");
              $q="SELECT * FROM `bus_info`";
              $result=mysqli_query($connection,$q);
              while ($res=mysqli_fetch_assoc($result)){   
@@ -78,7 +78,7 @@
                 </tbody>
                 <?php 
    	   }
-        mysqli_close($connection);
+        //include("../db_conn/colse.php");
        ?>
             </table>
         </div>

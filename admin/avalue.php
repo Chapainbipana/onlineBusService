@@ -3,7 +3,7 @@
 ?>
 <?php
   if(isset($_POST['asubmit'])){
-    include("connection.php");
+    include("../db_conn/connection.php");
     $aname = trim($_POST['uname']);
   	$password = trim( $_POST['password']);
     $q = " SELECT * FROM `admin` WHERE a_password='$password'"; 

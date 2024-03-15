@@ -3,7 +3,7 @@
 ?>
 <?php
     if(isset($_POST['lsubmit'])){
-        include("connection.php");
+        include("../db_conn/connection.php");
         $uname = trim($_POST['uname']);
         $password = trim( $_POST['password']);
         $q="SELECT `c_name`, `c_password` FROM `customer_login` WHERE c_password='$password' ";

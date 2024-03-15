@@ -2,7 +2,7 @@
    session_start();
 ?>
 <?php
- include '../connection.php';
+include("./../db_conn/connection.php");
              $q="SELECT * FROM `root`";
              $result=mysqli_query($connection,$q);
             

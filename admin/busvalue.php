@@ -4,7 +4,7 @@
 ?>
 <?php
   if (isset($_POST['addsubmit'])) {
-    include("connection.php");
+    include("../db_conn/connection.php");
     $b_num = trim($_POST['b_num']);
     $b_phone= trim($_POST['b_phone']);
     $b_source = trim($_POST['b_source']);
