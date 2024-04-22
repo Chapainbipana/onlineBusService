@@ -1,7 +1,6 @@
 <?php
 session_start();
 if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_SESSION['c_name']) && $_SESSION['c_password'])) {
-
   ?>
   <!doctype html>
   <html lang="en">
@@ -12,6 +11,25 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Online Bus Service</title>
+    <style>
+      .form-control{
+        margin: 5px;
+       
+       
+      }
+      form{
+        padding:5px;
+        margin: 10px;
+      }
+      label{
+        margin:10px;
+        font-size: 20px;
+      }
+    .field{
+      
+      }
+      
+    </style>
   </head>
 
   <body>
@@ -39,7 +57,7 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="customer/Booking/book.php">Book Ticket</a></li>
-                <li><a class="dropdown-item" href="busdisplay.php">Root details</a></li>
+                <li><a class="dropdown-item" href="root/root.php">Root details</a></li>
 
               </ul>
             </li>
@@ -61,10 +79,28 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
           </form>
         </div>
       </div>
-    </nav>
-
+</nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <form action="" method="post">
+            <div class="form-control">
+              <span class="field">
+             <label for="source"  > Source</label>
+               <input type="text"   name="source" required >
+              </span>
+              to:
+               <span class="field">
+                <label for="destination"  > Destination</label>
+               <input type="text"   name="destination" required >
+               </span>
+              <button type="submit" class="btn btn-primary" name="search">sumbit</button>
+           </div> 
+          </form>
+        </div>
+      </div>
+    </div>
     <section>
-
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-12">
@@ -81,8 +117,8 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
         </div>
       </div>
     </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"></script>
   </body>

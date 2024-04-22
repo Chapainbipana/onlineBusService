@@ -13,7 +13,8 @@
 </head>
 <body>
 <?php 
-      include '../admin/connection.php';
+include_once("../include/adminheader.php");
+      include '../db_conn/connection.php';
              $q="SELECT * FROM `bus_info`";
              $result=mysqli_query($connection,$q);
             

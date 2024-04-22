@@ -1,10 +1,14 @@
 <?php
    session_start();
-?>
+   if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_SESSION['c_name']) && $_SESSION['c_password'])) {
+    ?>
 <?php
-include("./../db_conn/connection.php");
-             $q="SELECT * FROM `root`";
-             $result=mysqli_query($connection,$q);
+include("../../db_conn/connection.php");
+             $sourceq="SELECT r_source FROM `root`";
+             $results=mysqli_query($connection,$sourceq);
+
+             $destinationq="SELECT r_destination FROM `root`";
+             $resultd=mysqli_query($connection,$destinationq);
             
 ?>
 <!doctype html>
@@ -75,9 +79,9 @@ include("./../db_conn/connection.php");
                              
                               <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="">
                               <?php
-                              while ($res=mysqli_fetch_assoc($result)){   
+                              while ($source_res=mysqli_fetch_assoc($results)){   
      ?>     
-                              <option value="<?php echo $res['r_source']?>"><?php echo $res['r_source']; ?></option>
+                              <option value="<?php echo $source_res['r_source']?>"><?php echo $source_res['r_source']; ?></option>
                               <?php
                               }
                               ?>
@@ -86,15 +90,17 @@ include("./../db_conn/connection.php");
                            <div class="mb-3">
                              <label for="cdestination" class="form-label">Destination:</label>
                              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="">
-                                <?php
-                                  while ($resultde=mysqli_fetch_assoc($result)){   
+                               <?php
+                                echo"<option>phalawas</option>";
+                                  while ($resultde=mysqli_fetch_assoc($resultd)){   
                                   ?>     
                                     <option><?php echo $resultde['r_destination']; ?></option>
                                     <option>hello</option>
                                     <?php
                                   }
+
                                  ?>
-                              
+                              <option>def</option>
                              </select>
                           </div>
                          <div class="mb-3">
@@ -119,5 +125,7 @@ include("./../db_conn/connection.php");
 </body>
 </html>
 <?php
-
+} else {
+  header('location:customer/login.php');
+}
 ?>

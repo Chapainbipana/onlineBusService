@@ -8,9 +8,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <title>online bus service</title>
 </head>
-<body>
+<body >
+    <?php
+       include_once("../include/adminheader.php");
+    ?>
     <section>
         <div class="container">
             <div class="row">
@@ -28,7 +32,7 @@ session_start();
                 </thead>
                 <tbody>
                 <?php
-             include '../customer/connection.php';
+             include '../db_conn/connection.php';
              $q="SELECT * FROM `root`";
              $result=mysqli_query($connection,$q);
              while ($res=mysqli_fetch_assoc($result)){   
