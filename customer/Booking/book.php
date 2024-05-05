@@ -100,7 +100,8 @@ include("../../db_conn/connection.php");
                                   }
 
                                  ?>
-                              <option>def</option>
+                              <option>pokhara</option>
+                              <option>chitwan</option>
                              </select>
                           </div>
                          <div class="mb-3">
@@ -122,7 +123,27 @@ include("../../db_conn/connection.php");
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+             $(document).ready(function() {
+              
+                var dtToday=new Date();
+                var month =dtToday.getMonth()+1;
+                var day =dtToday.getDay();
+                var year=dtToday.getFullYear();
+                if(month<10)
+                  month = '0'+month.toString();
+                
+                if(day<10)
+                  day='0'+day.toString();
+                
+                var maxDate = year+'-'+month+'-'+day;
+                $('#cdate').attr('min',maxDate);
+             
+              
+             })
+    </script>
+  </body>
 </html>
 <?php
 } else {

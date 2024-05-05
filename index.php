@@ -57,7 +57,7 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="customer/Booking/book.php">Book Ticket</a></li>
-                <li><a class="dropdown-item" href="root/root.php">Root details</a></li>
+                <li><a class="dropdown-item" href="rootdisplay.php">Root details</a></li>
 
               </ul>
             </li>
@@ -100,6 +100,53 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
         </div>
       </div>
     </div>
+    <?php
+      include("db_conn/connection.php");
+          if(isset($_POST['search'])){
+            $source=$_POST['source'];
+            $destination=$_POST['destination'];
+            
+            ?>
+           <table class="table">
+            <thead>
+              <tr>
+                <th>Bus Number</th>
+                <th>source </th>
+                <th>destination</th>
+                <th>Date</th>
+                <th>recive Ticket</th>
+              </tr>
+            </thead>
+            <tbody>
+                <?PHP
+                   $q="SELECT * FROM `root` WHERE r_source='$source' And r_destinatin='$destination'  ";
+                   $result=mysqli_query($connection,$q);
+                  
+                   while ($res=mysqli_fetch_assoc($result)){   
+                    
+                  ?>
+                
+                
+             
+              <tr>
+                <td scope="row"><?php echo $res['b_number']; ?></td>
+                <td><?php echo $res['r_source']; ?></td>
+                <td><?php echo $res['r_destinatin']; ?></td>
+                <td><?php echo $res['date']; ?></td>
+                <td><button><a href="customer/Booking/contact.php?b_number=<?php echo $res['b_number'];?>">recive</a></button></td>
+              </tr>
+              <?PHP
+                   }
+              ?>
+            </tbody>
+           </table>
+
+      <?php
+          }
+      ?>
+          
+    
+  
     <section>
       <div class="container">
         <div class="row">

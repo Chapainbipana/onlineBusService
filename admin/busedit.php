@@ -83,10 +83,8 @@
                 <label for="b_destination" class="form-label">Bus Destination</label>
                 <input type="text" class="form-control" id="b_destination" name="b_destination" value="<?php echo $res['destination']; ?>" required>
          </div>
-         <div class="mb-3">
-                <label for="b_time" class="form-label">Bus Time</label>
-                <input type="Time" class="form-control" id="b_time" name="b_time" value="<?php echo $res['b_time']; ?>" required>
-         </div>
+        
+         
          <div class="mb-3">
                    <button type="submit" class="btn btn-primary" name="editbus" >Submit</button>
           </div>   
