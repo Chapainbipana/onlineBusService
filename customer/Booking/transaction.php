@@ -15,42 +15,10 @@
     include("../../db_conn/connection.php");
     
     ?>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col lg-12 md-12">
-                <div class="container d-flex justify-content-around ">
-            <div class="row">
-             <form action="transaction.php" method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
-             <h1  class="align-center" aria-hidden="true">Contact Information</h1>
-                <div class="mb-3">
-                    <input type="hidden" name="id" value="<?php echo $res['id']; ?>">
-            </div>
-                <div class="mb-3">
-                <label for="c_name" class="form-label">Date:</label>
-                <input type="Date" class="form-control" id="t_date" name="t_date"  required >
-                </div>
-                <div class="mb-3">
-                 <label for="cage" class="form-label">:</label>
-                 <input type="text" class="form-control" id="cage" name="cage"  pattern="[1-9]{2}"  required>
-                </div>
-                <div class="mb-3">
-                 <label for="cphone" class="form-label">Phone:</label>
-                 <input type="text" class="form-control" id="cphone" name="cphone" pattern="\d{10}"  required>
-                </div>
 
-                
-               <button type="submit" class="btn btn-primary" name="customereditsubmit" >Submit</button>
-              </div>
-         </form>
-         </div>
-         </div>
 
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
