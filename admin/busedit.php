@@ -105,5 +105,4 @@
   else{
     header('location:admin.php');
   }
-  mysqli_close($connection);
   ?>

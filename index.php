@@ -133,7 +133,7 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
                 <td><?php echo $res['r_source']; ?></td>
                 <td><?php echo $res['r_destinatin']; ?></td>
                 <td><?php echo $res['date']; ?></td>
-                <td><button><a href="customer/Booking/contact.php?b_number=<?php echo $res['b_number'];?>">recive</a></button></td>
+                <td><button><a href="customer/contact.php?b_number=<?php echo $res['b_number'];?>">recive</a></button></td>
               </tr>
               <?PHP
                    }

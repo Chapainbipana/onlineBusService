@@ -24,7 +24,7 @@ include_once("../include/adminheader.php");
                 <div class="col lg-12 md-12">
                   <div class="container d-flex justify-content-around ">
                      <div class="row">
-                        <form action=" " method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
+                        <form action="" method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
                             <h1  class="align-center" aria-hidden="true">Add Rout</h1>
                             <div>
                             <label for="cdate" class="form-label">Bus Number :</label>
