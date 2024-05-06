@@ -2,7 +2,6 @@
    session_start();
    ?>
    <?php
- echo $_SESSION['c_name'];
  if (isset($_SESSION['c_name'])&&$_SESSION['c_password']){
  
 
@@ -13,7 +12,6 @@ include("../db_conn/connection.php");
  $q="SELECT * FROM `ticket` where b_number='$b_num' ";
           $result=mysqli_query($connection,$q);
           while ($res=mysqli_fetch_assoc($result)){  
-            echo $res['t_price'];
 ?>
 <!doctype html>
 <html lang="en">

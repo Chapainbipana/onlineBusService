@@ -1,6 +1,7 @@
 <?php
 session_start();
-if (isset($_SESSION['a_name'])&&isset($_SESSION['a_password'])) {
+
+
  
 ?>
 <!doctype html>

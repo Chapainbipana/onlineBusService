@@ -2,7 +2,6 @@
    session_start();
 ?>
 <?php
- echo $_SESSION['c_name'];
  if (isset($_SESSION['c_name'])&&$_SESSION['c_password']){
  
 
@@ -17,7 +16,8 @@
 </head>
 <body>
     <?php
-    include("../../db_conn/connection.php");
+    include("../db_conn/connection.php");
+    $customer=$_SESSION['c_name'];
     if(isset($_POST['contact'])){
         $b_number=$_POST['b_number'];
         $c_name=$_POST['cname'];
@@ -26,10 +26,19 @@
         $seat=$_POST['cseat'];
         $price=$_POST['price'];
         $date=date("Y-m-d");
-        
+    
+        $q="SELECT * FROM `customer_login` WHERE 'c_name'='$customer";
+    
+        $result=mysqli_query($connection,$q);
+       
+             while ($res=mysqli_fetch_assoc($result)){ 
+                $id= $res['id'];
+            
+             }
+            echo $id;
     }
-    echo"$date";
-    echo $_SESSION['c_name'];
+    
+    
     
     ?>
 
