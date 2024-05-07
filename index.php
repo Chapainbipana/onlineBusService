@@ -1,7 +1,6 @@
 <?php
 session_start();
-if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_SESSION['c_name']) && $_SESSION['c_password'])) {
-  ?>
+ ?>
   <!doctype html>
   <html lang="en">
 
@@ -10,6 +9,7 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="asset/css/style.css">
     <title>Online Bus Service</title>
     <style>
       .form-control{
@@ -32,7 +32,7 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
     </style>
   </head>
 
-  <body>
+  <body class="bg-secondary">
     <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
@@ -50,17 +50,11 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
             <li class="nav-item">
               <a class="nav-link" href="customeredit.php"></a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Book ticket
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="customer/Booking/book.php">Book Ticket</a></li>
-                <li><a class="dropdown-item" href="rootdisplay.php">Root details</a></li>
-
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="rootdisplay.php">Root View</a>
             </li>
+           
+            
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -71,6 +65,9 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
                 <li><a class="dropdown-item" href="customer/register.php">Register</a></li>
               </ul>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#about">About us</a>
+            </li>
 
           </ul>
           <form class="d-flex">
@@ -80,7 +77,7 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
         </div>
       </div>
 </nav>
-    <div class="container">
+    <div class="container bg-light">
       <div class="row">
         <div class="col-12">
           <form action="" method="post">
@@ -107,14 +104,17 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
             $destination=$_POST['destination'];
             
             ?>
-           <table class="table">
+           <table class="table p-2 table-striped table-hover table-bordered table-sm table-responsive-sm">
             <thead>
               <tr>
-                <th>Bus Number</th>
-                <th>source </th>
-                <th>destination</th>
-                <th>Date</th>
-                <th>recive Ticket</th>
+              <th scope="col">Bus Number</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Drive Number</th>
+                        <th scope="col">Source</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Aviable seats</th>
+                        
+                        <th scope="col">Recive Ticket</th>
               </tr>
             </thead>
             <tbody>
@@ -124,17 +124,25 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
                   
                    while ($res=mysqli_fetch_assoc($result)){   
                     
-                  ?>
-                
-                
-             
+                  ?>     
               <tr>
-                <td scope="row"><?php echo $res['b_number']; ?></td>
-                <td><?php echo $res['r_source']; ?></td>
-                <td><?php echo $res['r_destinatin']; ?></td>
-                <td><?php echo $res['date']; ?></td>
-                <td><button><a href="customer/contact.php?b_number=<?php echo $res['b_number'];?>">recive</a></button></td>
-              </tr>
+                       <td><?php echo $res['b_number']; ?></td>
+                        <td><?php echo $res['date']; ?></td>
+                        <td><?php echo $res['d_phone']; ?></td>
+                        <td><?php echo $res['r_source']; ?></td>
+                        <td><?php echo $res['r_destinatin']; ?></td>
+                        <td><?php echo $res['avaiable_seats']; ?></td>
+                        <?php
+                        if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_SESSION['c_name']) && $_SESSION['c_password'])) {
+                        ?>
+                        <td><button><a href="customer/contact.php?b_number=<?php echo $res['b_number'];?>">recive</a></button></td>
+                        <?php
+} else {
+  header('location:customer/login.php');
+}
+?>
+                      </tr>
+
               <?PHP
                    }
               ?>
@@ -148,13 +156,13 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
     
   
     <section>
-      <div class="container">
+      <div class="container p-2" id="about">
         <div class="row">
           <div class="col-lg-6 col-12">
             <img src="asset/img/bus.png" class="img-fluid" alt="..." style="">
           </div>
-          <div class="col-lg-6 col-12">
-            <h1>About</h1>
+          <div class="col-lg-6 col-12 bg-light">
+            <h1 >About</h1>
             <p>Buses are the most affordable means of transport with a large number of terminals across the country and
               convenient timetables to help you plan your trip. Buses is a convenient option both for those who travel on
               a shoestring budget and those who do not want to compromise on comfort. Dhaulagiri Yatayat offers bus
@@ -164,15 +172,18 @@ if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_S
         </div>
       </div>
     </section>
-    
+    <div class="container">
+      <div class="row">
+        <div class="col lg-6 md-6 col-12">
+
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"></script>
   </body>
 
   </html>
-  <?php
-} else {
-  header('location:customer/login.php');
-}
-?>
+  

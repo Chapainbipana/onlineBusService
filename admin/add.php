@@ -65,24 +65,24 @@
             <h1>Add Bus</h1>
           <div class="mb-3">
                <label for="b_num" class="form-label">Bus Number</label>
-               <input type="text" class="form-control" id="b_num" name="b_num" required >
+               <input type="text" class="form-control"  name="b_num" required >
                 
           </div>
           <div class="mb-3">
-                <label for="d_number" class="form-label">Phone</label>
-                <input type="text" class="form-control" id="b_phone" name="b_phone" pattern="\d{10}" required>
+                <label  class="form-label"> phone </label>
+                <input type="text" class="form-control"  name="phone" required>
          </div>
-         <div class="mb-3">
-                <label for="b_source" class="form-label">Bus source</label>
-                <input type="text" class="form-control" id="b_source" name="b_source" required>
+          
+          <div class="mb-3">
+                <label  class="form-label">DriveName</label>
+                <input type="text" class="form-control"  name="d_name"  required>
          </div>
+        
+         
+        
          <div class="mb-3">
-                <label for="b_destination" class="form-label">Bus Destination</label>
-                <input type="text" class="form-control" id="b_destination" name="b_destination" required>
-         </div>
-         <div class="mb-3">
-                <label for="b_time" class="form-label">Bus Time</label>
-                <input type="Time" class="form-control" id="b_time" name="b_time" required>
+                <label  class="form-label">Avaiable seats</label>
+                <input type="number" class="form-control"  name="seat" required>
          </div>
          <div class="mb-3">
                    <button type="submit" class="btn btn-primary" name="addsubmit" >Submit</button>

@@ -7,9 +7,9 @@
     include("../db_conn/connection.php");
     $b_num = trim($_POST['b_num']);
     $b_phone= trim($_POST['bphone']);
-    $b_source = trim($_POST['b_source']);
-    $b_destination = trim($_POST['b_destination']);
-    $q="UPDATE `bus_info` SET `phone` = '$b_phone', `source` = '$b_source', `destination` = '$b_destination' WHERE `bus_info`.`b_number` = '$b_num'";
+    $drivename = trim($_POST['drivename']);
+    $seat = trim($_POST['seat']);
+    $q="UPDATE `bus_info` SET `phone` = '$b_phone', `driver_name` = '$drivename', `avaiable_seat` = '$seat' WHERE `bus_info`.`b_number` = '$b_num'";
     $query=mysqli_query($connection,$q);
     if($query){
         header("location:busdisplay.php");

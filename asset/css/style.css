@@ -33,3 +33,6 @@ table{
 nav{
     position: sticky;
 }
+.footer{
+    background-color: yellow;
+}

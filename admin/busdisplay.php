@@ -57,8 +57,8 @@
                     <tr>
                         <th scope="col">Bus Number</th>
                         <th scope="col">Phone</th>
-                        <th scope="col">Source</th>
-                        <th scope="col">Destination</th>
+                        <th scope="col">DriveNumber</th>
+                        <th scope="col">Aviable Seats</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>
@@ -73,8 +73,8 @@
                     <tr>
                         <td><?php echo $res['b_number']; ?></td>
                         <td><?php echo $res['phone']; ?></td>
-                        <td><?php echo $res['source']; ?></td>
-                        <td><?php echo $res['destination']; ?></td>
+                        <td><?php echo $res['driver_name']; ?></td>
+                        <td><?php echo $res['avaiable_seat']; ?></td>
                         <td><button><a href="busedit.php?b_number=<?php echo $res['b_number'];?>">Edit</a></button></td>
                         <td><button><a href="busdelete.php?b_number=<?php echo $res['b_number'];?>">Delete</a></button></td>
                     </tr>

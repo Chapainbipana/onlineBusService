@@ -28,6 +28,9 @@
 
             <button type="submit" class="btn btn-warning" name="lsubmit" >sign-in</button>
             <button  class="btn btn-warning mrg-5"><a href="register.php">sign-up</a></button>
+            <div class="md-3">
+    	             new users<a href="register.php">login Here</a>
+      	    </div>
         </form>
             </div>
         </div>

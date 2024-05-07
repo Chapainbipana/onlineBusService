@@ -1,18 +1,9 @@
-<?php
-   session_start();
-   ?>
-   <?php
- if (isset($_SESSION['c_name'])&&$_SESSION['c_password']){
- 
 
+   <?php
+   session_start();
+   if (isset($_SESSION['c_name'])&&$_SESSION['c_password']){
 ?>
-<?PHP
-include("../db_conn/connection.php");
- $b_num= $_GET['b_number'];
- $q="SELECT * FROM `ticket` where b_number='$b_num' ";
-          $result=mysqli_query($connection,$q);
-          while ($res=mysqli_fetch_assoc($result)){  
-?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,57 +18,73 @@ include("../db_conn/connection.php");
 </head>
 <body class="cbg-img">
 <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">Online Bus service</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="customerdisplay.php">Customer</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Bus Detials 
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="add.php">Book Ticket</a></li>
-              <li><a class="dropdown-item" href="busdisplay.php">Root Detials</a></li>
-              
-            </ul>
-          </li><li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Account
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="login.php">login</a></li>
-              <li><a class="dropdown-item" href="register.php">Register</a></li>
-            </ul>
-          </li>
-          
-        </ul>
-        <form class="d-flex">
-          <button class="btn btn-outline-dark"><a href="logout.php">logout</a></button>
-        </form>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.php">
+        <i class="bi bi-bus-front">
+        </i> Online Bus service</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customeredit.php"></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Book ticket
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                <li><a class="dropdown-item" href="../rootdisplay.php">Book ticket</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Account
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="login.php">login</a></li>
+                <li><a class="dropdown-item" href="register.php">Register</a></li>
+              </ul>
+            </li>
+
+          </ul>
+          <form class="d-flex">
+
+            <button class="btn btn-outline-dark"><a href="logout.php">logout</a></button>
+          </form>
+        </div>
       </div>
-    </div>
-  </nav>
+</nav>
 
     <section>
         <div class="container">
             <div class="row">
                 <div class="col lg-12 md-12">
                 <div class="container d-flex justify-content-around ">
+                
             <div class="row">
-             <form action="transaction.php" method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
-             <h1  class="align-center" aria-hidden="true">Contact Information</h1>
+             <form action="transaction.php" method="post" class="p-5  m-5 shadow" >
+             <h1  class="align-center" aria-hidden="true">Ticket Receive</h1>
+             <?php
+                   include("../db_conn/connection.php");
+                   
+                   $b_num= $_GET['b_number'];
+                   
+                    $q="SELECT * FROM `root` where b_number='$b_num' ";
+                    $result=mysqli_query($connection,$q);
+                           
+                     while ($res=mysqli_fetch_assoc($result)){  
+                      
+               ?>
                 <div class="mb-3">
                     <input type="hidden" name="b_number" value="<?php echo $res['b_number']; ?>">
             </div>
@@ -99,7 +106,7 @@ include("../db_conn/connection.php");
                        </div>
                 <div class="mb-3">
                  <label for="cphone" class="form-label">Ticket price:</label>
-                 <input type="text" class="form-control" id="price" name="price" value="<?php echo $res['t_price']; ?>" placeholder="<?php echo $res['t_price']; ?>"  readonly  required>
+                 <input type="text" class="form-control" id="price" name="price" value="<?php echo $res['price']; ?>" placeholder="<?php echo $res['t_price']; ?>"  readonly  required>
                 </div>
 
                <button type="submit" class="btn btn-primary" name="contact" >Submit</button>
@@ -115,11 +122,14 @@ include("../db_conn/connection.php");
     <?php
           }
     ?>
+    <div class="footer">
+      
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
 <?php
-     }
+}
  else{
  header('location:login.php');
   }

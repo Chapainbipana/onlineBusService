@@ -6,12 +6,13 @@
   if (isset($_POST['addsubmit'])) {
     include("../db_conn/connection.php");
     $b_num = trim($_POST['b_num']);
-    $b_phone= trim($_POST['b_phone']);
-    $b_source = trim($_POST['b_source']);
-    $b_destination = trim($_POST['b_destination']);
-    $b_time = trim($_POST['b_time']);
+    $b_phone= trim($_POST['phone']);
+    $d_name = trim($_POST['d_name']);
+    
+    
+    $seat = trim($_POST['seat']);
 
-    $q="INSERT INTO `bus_info`(`b_number`, `phone`, `source`, `destination`, `b_time`) VALUES ('$b_num','$b_phone','$b_source','$b_destination','$b_time')";
+    $q="INSERT INTO `bus_info`(`b_number`, `phone`, `driver_name`, `avaiable_seat`) VALUES ('$b_num','$b_phone','$d_name','$seat')";
      $query=mysqli_query($connection,$q);
      if($query){
         header("location:busdisplay.php");
