@@ -65,7 +65,7 @@
      <section>
          <div class="container d-flex justify-content-around ">
             <div class="row">
-             <form action=" "  method="post"  class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
+             <form action="customereditvalue.php"  method="post"  class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
              <h1  class="align-center" aria-hidden="true"> Edit customer</h1>
                 <div class="mb-3">
                     <input type="hidden" name="id" value="<?php echo $res['id']; ?>">

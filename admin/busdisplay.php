@@ -57,8 +57,8 @@
                     <tr>
                         <th scope="col">Bus Number</th>
                         <th scope="col">Phone</th>
-                        <th scope="col">DriveNumber</th>
-                        <th scope="col">Aviable Seats</th>
+                        <th scope="col">DriveName</th>
+                        <th scope="col">Avaiable Seats</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>
