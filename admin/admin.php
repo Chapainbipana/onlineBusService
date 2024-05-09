@@ -14,7 +14,7 @@
      
     <section>
         <div class="container d-flex justify-content-around ">
-        <form action="avalue.php" method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
+        <form action="avalue.php" method="post"  class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
             <h1>Admin</h1>
           <div class="mb-3">
                <label for="username" class="form-label">User Name</label>

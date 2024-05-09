@@ -4,7 +4,7 @@
 ?>
 
 <?php
-  if (isset($_POST['addroot'])) {
+  if (isset($_POST['editroot'])) {
     include("../db_conn/connection.php");
     $b_num = trim($_POST['b_number']);
     $b_phone= trim($_POST['phone']);
@@ -13,19 +13,17 @@
     $price = trim($_POST['price']);
     $seat = trim($_POST['avaible_seat']);
     $date = trim($_POST['date']);
-    $q="INSERT INTO `root`(`b_number`, `d_phone`, `r_source`, `r_destinatin`, `price`, `avaiable_seats`, `date`) VALUES ($b_num,$b_phone,$source,$destination,$price,$seat,$date)";
+    $q="UPDATE `root` SET `b_number`='$b_num',`d_phone`='$b_phone',`r_source`='$source',`r_destinatin`='$destination',`price`='$price',`avaiable_seats`='$seat',`date`='$date'  WHERE `root`.`b_number` = '$b_num'";
     $query=mysqli_query($connection,$q);
     if($query){
-       // header("location:root.php");
+        header("location:root.php");
     } 
-    else {
-       // header("location:addroot.php");
-       echo "error".$query."<br>".mysqli_error($connection);
-    }
+    else{
+        echo"error";
   }
-?>
-
-<?php
+  }
+    ?>
+    <?php
      }
   else{
     header('location:admin.php');

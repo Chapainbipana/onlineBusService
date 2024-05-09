@@ -82,7 +82,7 @@
                 echo"hello";
                 $id= $res['id'];
              }
-        $insetquery="INSERT INTO `transzactions`( `date`, `c_name`, `price`) VALUES ($date,$c_name,$price)";
+        $insetquery="INSERT INTO `transactions`(`b_number`, `date`,`c_name`, `price`) VALUES ($b_number,$date,$c_name,$price)";
         $query=mysqli_query($connection,$insetquery);
         if($query){
 
@@ -139,7 +139,18 @@
             </div>
         </div>
        </div>
-
+       <section>
+      <div class="container">
+        <div class="row" style="height: 100px";>
+          <div class="col-5"></div>
+          <div class="col-5"></div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </section>
+<?php
+ include_once("../include/footer.php");
+?>
    
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>

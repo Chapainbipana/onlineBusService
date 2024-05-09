@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
-    <title>Online Bus Service</title>
+    <title>Online Bus Service System</title>
     <style>
         
     </style>
@@ -14,7 +14,7 @@
     <section>
         <div class="container d-flex justify-content-around">
             <div class="row">
-            <form action="lvalue.php" method="post" class="p-5 m-5 " onsubmit=" return itsfunction()">
+            <form action="lvalue.php" method="post"  class="p-5 m-5 " onsubmit=" return itsfunction()">
             <h1 class=" text-center">User</h1>
           <div class="mb-3">
                <label for="username" class="form-label" > User Name</label>

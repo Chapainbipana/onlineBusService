@@ -1,5 +1,6 @@
 <?php
-          include 'connection.php';
+          
+          include("../db_conn/connection.php");
           $id= $_GET['id'];
           $q="SELECT * FROM `customer_login` where id='$id' ";
           $result=mysqli_query($connection,$q);

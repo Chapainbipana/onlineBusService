@@ -15,12 +15,52 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="asset/css/style.css">
     <title>online bus service</title>
+    <style>
+      .footer {
+    background-color: #343a40;
+    color: #fff;
+    /*padding: 20px 0;*/
+    text-align: center;
+  }
+  .footer-social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .footer-social-icons ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .footer-social-icons ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .footer-social-icons ul li a:hover {
+    color: #ffd700;
+  }
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  .footer p a {
+    color: gold;
+    text-decoration: none;
+  }
+  .footer p a:hover {
+    text-decoration: underline;
+  }
+  th,td{
+    padding: 70px;
+  }
+
+    </style>
 </head>
 <body class="bg-img" >
     
 <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
       <div class="container-fluid">
-        <a class="navbar-brand" href="./index.php">
+        <a class="navbar-brand" href="index.php">
         <i class="bi bi-bus-front">
         </i> Online Bus service</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -46,27 +86,29 @@ session_start();
                 Account
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./customer/login.php">login</a></li>
-                <li><a class="dropdown-item" href="./customer/register.php">Register</a></li>
+                <li><a class="dropdown-item" href="customer/login.php">login</a></li>
+                <li><a class="dropdown-item" href="customer/register.php">Register</a></li>
               </ul>
             </li>
 
           </ul>
           <form class="d-flex">
 
-            <button class="btn btn-outline-dark"><a href="./customer/logout.php">logout</a></button>
+            <button class="btn btn-outline-dark"><a href="customer/logout.php">logout</a></button>
           </form>
         </div>
       </div>
 </nav>
     <section>
-    <div class="title">
+    
+        <div class="container m-10">
+            <div class="row">
+            <div class="title">
               <h1>Root</h1>
              </div>
         <div class="container">
-            <div class="row">
                 <div class="col-lg-12 col-md-12 col-12">
-                <table class="table  table-striped table-hover table-bordered table-sm table-responsive-sm">
+                <table class="table  table-striped table-hover table-bordered table-xl table-responsive-xl">
                 <thead>
                     <tr>
                         <th scope="col">Bus Number</th>
@@ -76,7 +118,7 @@ session_start();
                         <th scope="col">Destination</th>
                         
                         <th scope="col">Ticket Price</th>
-                        <th scope="col">Aviable seats</th>
+                        <th scope="col">Avaiable seats</th>
                         <th scope="col">Receive Ticket</th>
                         
                     </tr>
@@ -108,7 +150,33 @@ session_start();
             </div>
         </div>
     </section>
-<div class="footer"></div>
+    <section>
+      <div class="container">
+        <div class="row" style="height: 140px";>
+          <div class="col-5"></div>
+          <div class="col-5"></div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+<div class="footer bg-secondary">
+  <div class="row">
+    <div class="col-12">
+      <div class="footer-social-icons d-flex justify-content-around ">
+        <ul>
+          <li><a target="_blank" class="facebook" href="https://www.facebook.com/Bipanachapain/"><span>Facebook</span></a></li>
+          <li><a target="_blank" class="twitter" href="https://github.com/chapainbipana"><span>GitHub</span></a></li>
+          <li><a target="_blank" class="gmail" href="#"><span>Google</span></a></li>
+        </ul>
+      </div>
+        <p>Copyright © 2024 Team Unique (Leader <a style="color: gold;" target="_blank" href="https://www.facebook.com/Bipanachapain/">Bipana chapin</a>) All rights reserved.</p>
+    </div>
+  </div>
+</div>
+
+      </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

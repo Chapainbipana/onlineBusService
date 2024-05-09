@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
   <title>Online Bus Service</title>
  </head>
- <body class="bg-secondary">  
+ <body class="">  
  <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
     <div class="container-fluid">
       <a class="navbar-brand " href="index.php">Online Bus service</a>
@@ -67,7 +67,7 @@
                 <div class="title">
               <h1>Root</h1>
              </div>
-                <table class="table  table-striped table-hover table-bordered table-sm table-responsive-sm">
+                <table class="table  table-striped table-hover table-bordered table-xl table-responsive-xl">
                 <thead>
                     <tr>
                     <th scope="col">Bus Number</th>
@@ -75,6 +75,7 @@
                         <th scope="col">Drive Number</th>
                         <th scope="col">Source</th>
                         <th scope="col">Destination</th>
+                        <th scope="col">Price</th>
                         <th scope="col">Avaiable seats</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
@@ -93,9 +94,10 @@
                         <td><?php echo $res['d_phone']; ?></td>
                         <td><?php echo $res['r_source']; ?></td>
                         <td><?php echo $res['r_destinatin']; ?></td>
+                        <td><?php echo $res['price']; ?></td>
                         <td><?php echo $res['avaiable_seats']; ?></td>
-                        <td><button><a href="busedit.php?b_number=<?php echo $res['b_number'];?>">Edit</a></button></td>
-                        <td><button><a href="busdelete.php?b_number=<?php echo $res['b_number'];?>">Delete</a></button></td>
+                        <td><button><a href="editroot.php?b_number=<?php echo $res['b_number'];?>">Edit</a></button></td>
+                        <td><button><a href="rootdelete.php?b_number=<?php echo $res['b_number'];?>">Delete</a></button></td>
                     </tr>
                     <?php
                     }
@@ -107,6 +109,7 @@
             </div>
         </div>
     </section>
+    <!--
     <div class="contianer">
     <div class="row">
          <div class="col-lg-6 col-md-12 col-12">
@@ -120,6 +123,10 @@
          </div>
     </div>
 </div>
+                  -->
+<!--
+
+-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>

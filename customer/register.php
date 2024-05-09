@@ -10,8 +10,9 @@
 <body>
 <body class="cbg-img"> 
      <section>
-         <div class="container d-flex justify-content-around ">
+         <div class="container ">
             <div class="row">
+            <div class="col-7">
              <form action="rvalue.php" method="post" class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
              <h1  class="align-center" aria-hidden="true">New Register</h1>
                 <div class="mb-3">
@@ -37,8 +38,18 @@
                 </div>
           
                <button type="submit" class="btn btn-primary" name="rsubmit" >Submit</button>
-              </div>
+              
          </form>
+         </div>
+         
+         <div class="col-5 agent-right">
+         </br>
+		</br>
+		</br>
+         <h3>Contact Us</h3>
+			<p><a href="mailto:example@email.com">contact@example.com</a></p>
+			<p>+9779800000000</p>
+         </div>
          </div>
          </div>
      </section>

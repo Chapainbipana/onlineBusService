@@ -58,55 +58,57 @@
 
 <?php 
 
-     //include '../db_conn/connection.php';
-           //  $q="SELECT * FROM `bus_info`";
-            // $result=mysqli_query($connection,$q);
-            
-            
+include("../db_conn/connection.php");
+$b_num= $_GET['b_number'];
+$q="SELECT * FROM `root` where b_number='$b_num' ";
+$result=mysqli_query($connection,$q);
+while ($res=mysqli_fetch_assoc($result)){ 
             ?>
     <section>
   <div class="container d-flex justify-content-around">
     <div class="row">
-    <form action="rootvalue.php " method="post" class="p-5  m-5 shadow">
+    <form action="editvalue.php "  method="post" class="p-5  m-5 shadow">
             <h1>Add Root</h1>
           <div class="mb-3">
                <label for="b_num" class="form-label">Bus Number:</label>
-               <input type="text" class="form-control"  name="b_number" required >
+               <input type="text" class="form-control"  name="b_number" value="<?php echo $res['b_number']; ?>" required >
                 
           </div>
           <div class="mb-3">
                 <label for="phone" class="form-label"> phone :</label>
-                <input type="text" class="form-control"  name="phone" required>
+                <input type="text" class="form-control"  name="phone" value="<?php echo $res['d_phone']; ?>" required>
          </div>
           
           <div class="mb-3">
                 <label for="source" class="form-label">source:</label>
-                <input type="text" class="form-control"  name="source"  required>
+                <input type="text" class="form-control"  name="source" value="<?php echo $res['r_source']; ?>" required>
          </div>
          <div class="mb-3">
                 <label for="destination" class="form-label">destination</label>
-                <input type="text" class="form-control"  name="destination"  required>
+                <input type="text" class="form-control"  name="destination" value="<?php echo $res['r_destinatin']; ?>" required>
          </div>
          <div class="mb-3">
                 <label for="price" class="form-label">price</label>
-                <input type="number" class="form-control"  name="price"  required>
+                <input type="number" class="form-control"  name="price" value="<?php echo $res['price']; ?>" required>
          </div>
          <div class="mb-3">
                 <label for="seat" class="form-label">Avaible seat</label>
-                <input type="number" class="form-control"  name="avaible_seat"  required>
+                <input type="number" class="form-control"  name="avaible_seat" value="<?php echo $res['avaiable_seats']; ?>" required>
          </div>
          <div class="mb-3">
                 <label for="date" class="form-label">Date</label>
-                <input type="date-" class="form-control" id="date" name="date"  required>
+                <input type="dateime" class="form-control" id="date" name="date" value="<?php echo $res['date']; ?>"  required>
          </div>
          <div class="mb-3">
-                   <button type="submit" class="btn btn-primary" name="addroot" >Submit</button>
+                   <button type="submit" class="btn btn-primary" name="editroot" >Submit</button>
           </div>   
         </form>
         </div>
     </div>
 </section>
-
+<?php
+}
+?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

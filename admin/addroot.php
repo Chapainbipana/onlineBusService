@@ -65,7 +65,9 @@
     <section>
   <div class="container d-flex justify-content-around">
     <div class="row">
-    <form action="rootvalue.php " method="post" class="p-5  m-5 shadow">
+    <div class="col-5"></div>
+    
+    <form action="rootvalue.php " method="post"  class="p-5  m-5 shadow">
             <h1>Add Root</h1>
           <div class="mb-3">
                <label for="b_num" class="form-label">Bus Number:</label>
@@ -99,7 +101,7 @@
          </div>
          <div class="mb-3">
                    <button type="submit" class="btn btn-primary" name="addroot" >Submit</button>
-          </div>   
+          </div>  
         </form>
         </div>
     </div>

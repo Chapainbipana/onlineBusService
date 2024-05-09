@@ -28,11 +28,46 @@ session_start();
     .field{
       
       }
+      .footer {
+    background-color: #343a40;
+    color: #fff;
+    /*padding: 20px 0;*/
+    text-align: center;
+  }
+  .footer-social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .footer-social-icons ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .footer-social-icons ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .footer-social-icons ul li a:hover {
+    color: #ffd700;
+  }
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  .footer p a {
+    color: gold;
+    text-decoration: none;
+  }
+  .footer p a:hover {
+    text-decoration: underline;
+  }
+
       
     </style>
   </head>
 
-  <body class="bg-secondary">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
@@ -77,13 +112,13 @@ session_start();
         </div>
       </div>
 </nav>
-    <div class="container bg-light">
-      <div class="row">
-        <div class="col-12">
-          <form action="" method="post">
+    <div class="container">
+      <div class="row row justify-content-center">
+        <div class="col-9">
+          <form action="" id="search" method="post">
             <div class="form-control">
               <span class="field">
-             <label for="source"  > Source</label>
+             <label for="source" > Source</label>
                <input type="text"   name="source" required >
               </span>
               to:
@@ -94,9 +129,14 @@ session_start();
               <button type="submit" class="btn btn-primary" name="search">sumbit</button>
            </div> 
           </form>
-        </div>
+        </div><div class="col-3 agent-right">
+         <h3>Contact Us</h3>
+			<p><a href="mailto:example@email.com">contact@example.com</a></p>
+			<p>+9779800000000</p>
+         </div>
       </div>
     </div>
+    
     <?php
       include("db_conn/connection.php");
           if(isset($_POST['search'])){
@@ -104,7 +144,7 @@ session_start();
             $destination=$_POST['destination'];
             
             ?>
-           <table class="table p-2 table-striped table-hover table-bordered table-sm table-responsive-sm">
+           <table class="table p-2 table-striped table-hover table-bordered table-xl table-responsive-xl">
             <thead>
               <tr>
               <th scope="col">Bus Number</th>
@@ -112,6 +152,7 @@ session_start();
                         <th scope="col">Drive Number</th>
                         <th scope="col">Source</th>
                         <th scope="col">Destination</th>
+                        <th scope="col">Price</th>
                         <th scope="col">Aviable seats</th>
                         
                         <th scope="col">Recive Ticket</th>
@@ -131,16 +172,17 @@ session_start();
                         <td><?php echo $res['d_phone']; ?></td>
                         <td><?php echo $res['r_source']; ?></td>
                         <td><?php echo $res['r_destinatin']; ?></td>
+                        <td>Rs<?php echo $res['price']; ?></td>
                         <td><?php echo $res['avaiable_seats']; ?></td>
                         <?php
                         if ((isset($_SESSION['a_name']) && isset($_SESSION['a_password'])) || (isset($_SESSION['c_name']) && $_SESSION['c_password'])) {
                         ?>
                         <td><button><a href="customer/contact.php?b_number=<?php echo $res['b_number'];?>">recive</a></button></td>
                         <?php
-} else {
-  header('location:customer/login.php');
-}
-?>
+                      } else {
+                            header('location:customer/login.php');
+                           }
+                        ?>
                       </tr>
 
               <?PHP
@@ -152,7 +194,11 @@ session_start();
       <?php
           }
       ?>
-          
+    <div class="section">
+      <div class="row">
+        <img src="asset/img/photo.avif" class="img-fluid" alt="...">
+      </div>
+    </div>   
     
   
     <section>
@@ -161,7 +207,7 @@ session_start();
           <div class="col-lg-6 col-12">
             <img src="asset/img/bus.png" class="img-fluid" alt="..." style="">
           </div>
-          <div class="col-lg-6 col-12 bg-light">
+          <div class="col-lg-6 col-12">
             <h1 >About</h1>
             <p>Buses are the most affordable means of transport with a large number of terminals across the country and
               convenient timetables to help you plan your trip. Buses is a convenient option both for those who travel on
@@ -172,14 +218,23 @@ session_start();
         </div>
       </div>
     </section>
-    <div class="container">
-      <div class="row">
-        <div class="col lg-6 md-6 col-12">
-
-        </div>
+<section>
+    <div class="footer bg-secondary">
+  <div class="row">
+    <div class="col-12">
+      <div class="footer-social-icons d-flex justify-content-around ">
+        <ul>
+          <li><a target="_blank" class="facebook" href="https://www.facebook.com/Bipanachapain/"><span>Facebook</span></a></li>
+          <li><a target="_blank" class="twitter" href="https://github.com/chapainbipana"><span>GitHub</span></a></li>
+          <li><a target="_blank" class="googleplus" href="#"><span>Google+</span></a></li>
+        </ul>
       </div>
+        <p>Copyright © 2024 Team Unique (Leader <a style="color: gold;" target="_blank" href="https://www.facebook.com/Bipanachapain/">Bipana chapin</a>) All rights reserved.</p>
     </div>
-    <div class="footer"></div>
+  </div>
+</div>
+
+      </section>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"></script>

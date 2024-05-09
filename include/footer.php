@@ -1,13 +1,14 @@
-<div class="contianer">
-    <div class="row">
-         <div class="col-lg-6 col-md-12 col-12">
-         <img src="../asset/img/bus.png" class="img-fluid" alt="..." style="">
-       
-         </div>
-         <div class="col-lg-6 col-md-12 col-12">
-         <h1>About</h1>
-          <p>Buses are the most affordable means of transport with a large number of terminals across the country and convenient timetables to help you plan your trip. Buses is a convenient option both for those who travel on a shoestring budget and those who do not want to compromise on comfort. Dhaulagiri Yatayat offers bus service with an online reservation available. Before booking your ticket, read other travellers’ reviews to choose the best option.</p>
-       
-         </div>
+<div class="footer bg-secondary">
+<div class="row">
+    <div class="col-12">
+    <div class="footer-social-icons d-flex justify-content-around">
+            <ul>
+                <li><a target="_blank" class="facebook" href="https://www.facebook.com/Bipana chapain/"><span>Facebook</span></a></li>
+                <li><a target="_blank" class="twitter" href="https://github.com/chapainbipana"><span>GitHub</span></a></li>
+                <li><a target="_blank" class="googleplus" href="#"><span>Google+</span></a></li>
+            </ul>
+        </div>
+        <p>Copyright © 2024 Team Unique (Leader <a style="color: gold;" target="_blank" href="https://www.facebook.com/Bipana chapain/">Bipana chapin</a>) All rights reserved.</p>
     </div>
+</div>
 </div>

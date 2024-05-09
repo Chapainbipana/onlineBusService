@@ -61,7 +61,18 @@
 <section>
   <div class="container d-flex justify-content-around">
     <div class="row">
-    <form action="busvalue.php " method="post" class="p-5  m-5 shadow">
+     <div class="col-4">
+      <br>
+      <br>
+      <br>
+     <img src="../asset/img/photo.avif" class="img-fluid" alt="...">
+      </div>
+      
+     
+     
+     
+     <div class="col-8">
+    <form action="busvalue.php " method="post"  class="p-5  m-5 shadow">
             <h1>Add Bus</h1>
           <div class="mb-3">
                <label for="b_num" class="form-label">Bus Number</label>
@@ -88,6 +99,7 @@
                    <button type="submit" class="btn btn-primary" name="addsubmit" >Submit</button>
           </div>   
         </form>
+        </div>
         </div>
     </div>
 </section>

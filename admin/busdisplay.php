@@ -52,7 +52,7 @@
   <div class="section">
     <div class="container">
         <div class="row">
-            <table class="table  table-striped table-hover table-bordered table-sm table-responsive-sm">
+            <table class="table  table-striped table-hover table-bordered table-xl table-responsive-xl">
                 <thead>
                     <tr>
                         <th scope="col">Bus Number</th>
