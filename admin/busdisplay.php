@@ -38,7 +38,17 @@
               <li><a class="dropdown-item" href="busdisplay.php">display Bus Detials</a></li>
             </ul>
           </li>
-          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Root
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="addroot.php">Add Root</a></li>
+              <li><a class="dropdown-item" href="root.php">Root Display</a></li>
+             
+            </ul>
+          </li>
         </ul>
         <form class="d-flex">
           <button class="btn btn-outline-dark"><a href="logout.php">logout</a></button>

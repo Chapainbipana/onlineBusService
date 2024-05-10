@@ -126,7 +126,7 @@ session_start();
                 <label for="destination"  > Destination</label>
                <input type="text"   name="destination" required >
                </span>
-              <button type="submit" class="btn btn-primary" name="search">sumbit</button>
+              <button type="submit" class="btn btn-primary" name="search">search</button>
            </div> 
           </form>
         </div><div class="col-3 agent-right">
