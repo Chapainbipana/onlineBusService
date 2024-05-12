@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
-    <title>Title</title>
+    <title>Online Bus Service System</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
@@ -68,7 +68,7 @@
     include("../db_conn/connection.php");
     $customer=$_SESSION['c_name'];
     if(isset($_POST['contact'])){
-        $id;
+        $id ="";
         $b_number=$_POST['b_number'];
         $c_name=$_POST['cname'];
         $cage=$_POST['cage'];
@@ -76,25 +76,25 @@
         $seat=$_POST['cseat'];
         $price=$_POST['price'];
         $date=date("Y-m-d");
-        $q="SELECT * FROM `customer_login` WHERE 'c_name'='$customer' ";
+        $q="SELECT * FROM `customer_login` WHERE 'c_name' = '$customer' ";
         $result=mysqli_query($connection,$q);
-             while ($res=mysqli_fetch_assoc($result)){ 
-                echo"hello";
-                $id= $res['id'];
-             }
-        $insetquery="INSERT INTO `transactions`(`b_number`, `date`,`c_name`, `price`) VALUES ($b_number,$date,$c_name,$price)";
-        $query=mysqli_query($connection,$insetquery);
+        
+        //echo "error".$result."<br>".mysqli_error($connection);
+          while ($man = mysqli_fetch_assoc($result)) { 
+              $id = $man['id'];
+              echo"$id";
+              echo"hello";
+          }
+          echo"$id";
+          ///echo "error".$result."<br>".mysqli_error($connection);
+        $insertquery="INSERT INTO `transactions`(`b_number`, `date`,`c_name`, `price`) VALUES ('$b_number','$date','$c_name','$price')";
+        
+        $query=mysqli_query($connection, $insertquery);
+        echo"$insertquery";
         if($query){
-
-        }
-
-   
-    
-    
-    
-    ?>
-
-       <div class="section">
+          
+      ?>
+      <div class="section">
         <div class="container">
         <div class="title">
               <h1>Ticket</h1>
@@ -139,6 +139,16 @@
             </div>
         </div>
        </div>
+       
+      <?Php
+        }
+        else {
+          // header("location:addroot.php");
+          echo "error".$query."<br>".mysqli_error($connection);
+       }
+    ?>
+<!--
+        -->
        <section>
       <div class="container">
         <div class="row" style="height: 100px";>
@@ -148,6 +158,7 @@
         </div>
       </div>
     </section>
+     
 <?php
  include_once("../include/footer.php");
 ?>

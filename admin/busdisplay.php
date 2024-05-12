@@ -85,8 +85,8 @@
                         <td><?php echo $res['phone']; ?></td>
                         <td><?php echo $res['driver_name']; ?></td>
                         <td><?php echo $res['avaiable_seat']; ?></td>
-                        <td><button><a href="busedit.php?b_number=<?php echo $res['b_number'];?>">Edit</a></button></td>
-                        <td><button><a href="busdelete.php?b_number=<?php echo $res['b_number'];?>">Delete</a></button></td>
+                        <td><button class="btn btn-warning"><a href="busedit.php?b_number=<?php echo $res['b_number'];?>">Edit</a></button></td>
+                        <td><button class="btn btn-danger"><a href="busdelete.php?b_number=<?php echo $res['b_number'];?>">Delete</a></button></td>
                     </tr>
                 </tbody>
                 <?php 

@@ -58,7 +58,6 @@
     </div>
   </nav>
 
-
 <section>
         <div class="container">
             <div class="row">
@@ -77,6 +76,7 @@
                         <th scope="col">Destination</th>
                         <th scope="col">Price</th>
                         <th scope="col">Avaiable seats</th>
+                        <!--<th scope="col">Receive</th>-->
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>
@@ -96,8 +96,8 @@
                         <td><?php echo $res['r_destinatin']; ?></td>
                         <td><?php echo $res['price']; ?></td>
                         <td><?php echo $res['avaiable_seats']; ?></td>
-                        <td><button><a href="editroot.php?b_number=<?php echo $res['b_number'];?>">Edit</a></button></td>
-                        <td><button><a href="rootdelete.php?b_number=<?php echo $res['b_number'];?>">Delete</a></button></td>
+                        <td><button class="btn btn-warning"><a href="editroot.php?b_number=<?php echo $res['b_number'];?>">Edit</a></button></td>
+                        <td><button class="btn btn-danger"><a href="rootdelete.php?b_number=<?php echo $res['b_number'];?>">Delete</a></button></td>
                     </tr>
                     <?php
                     }

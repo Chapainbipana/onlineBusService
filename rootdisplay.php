@@ -101,11 +101,11 @@ session_start();
 </nav>
     <section>
     
-        <div class="container m-10">
+        <div class="container ">
             <div class="row">
-            <div class="title">
+           
               <h1>Root</h1>
-             </div>
+            
         <div class="container">
                 <div class="col-lg-12 col-md-12 col-12">
                 <table class="table  table-striped table-hover table-bordered table-xl table-responsive-xl">
@@ -123,14 +123,15 @@ session_start();
                         
                     </tr>
                 </thead>
-                <tbody>
+                
+
                 <?php
              include 'db_conn/connection.php';
              $q="SELECT * FROM `root`";
              $result=mysqli_query($connection,$q);
              while ($res=mysqli_fetch_assoc($result)){   
             ?>
-                    <tr>
+                   <tr>
                         <td><?php echo $res['b_number']; ?></td>
                         <td><?php echo $res['date']; ?></td>
                         <td><?php echo $res['d_phone']; ?></td>
@@ -138,39 +139,57 @@ session_start();
                         <td><?php echo $res['r_destinatin']; ?></td>
                         <td>Rs<?php echo $res['price']; ?></td>
                         <td><?php echo $res['avaiable_seats']; ?></td>
-                        <td><button><a href="customer/contact.php?b_number=<?php echo $res['b_number'];?>">Receive Ticket</a></button></td>
+                        <td><button class="btn btn-warning"><a href="customer/receiveticket.php?b_number=<?php echo $res['b_number'];?>">Receive Ticket</a></button></td>
                     </tr>
+                       
+             
+              
+
+              
+             
+
                     <?php
                     }
                     mysqli_close($connection);
                     ?>
-                </tbody>
-                  </table>                  
+              
+              </table>               
                  </div>
             </div>
         </div>
+        </div>
     </section>
-    <section>
+   <!-- <section>
       <div class="container">
         <div class="row" style="height: 140px";>
-          <div class="col-5"></div>
+          <div class="col-5">
+            <div>
+              Bus Number:
+              
+              Drive Number:
+              Avaiable seats:
+              <button>BUY TicKet</button>
+            </div>
+          </div>
           <div class="col-5"></div>
           <div class="col-2"></div>
         </div>
       </div>
     </section>
+                  -->
     <section>
 <div class="footer bg-secondary">
   <div class="row">
     <div class="col-12">
-      <div class="footer-social-icons d-flex justify-content-around ">
+     <!-- <div class="footer-social-icons d-flex justify-content-around ">
         <ul>
           <li><a target="_blank" class="facebook" href="https://www.facebook.com/Bipanachapain/"><span>Facebook</span></a></li>
           <li><a target="_blank" class="twitter" href="https://github.com/chapainbipana"><span>GitHub</span></a></li>
           <li><a target="_blank" class="gmail" href="#"><span>Google</span></a></li>
         </ul>
       </div>
-        <p>Copyright © 2024 Team Unique (Leader <a style="color: gold;" target="_blank" href="https://www.facebook.com/Bipanachapain/">Bipana chapin</a>) All rights reserved.</p>
+                  -->
+        <p>Copyright © 2024  All rights reserved.</p>
     </div>
   </div>
 </div>

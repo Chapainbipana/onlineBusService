@@ -65,25 +65,25 @@
       </div>
 </nav>
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col lg-12 md-12">
-                <div class="container d-flex justify-content-around ">
+    <section>  <div class="row">
                 
-            <div class="row">
-             <form action="transaction.php"  method="post" class="p-5  m-5 shadow" >
+                <div class="col-5 lg-5 md-5">
+                
+             <form action="pay.php"  method="post" class="p-5   " >
              <h1  class="align-center" aria-hidden="true">Ticket Receive</h1>
              <?php
                    include("../db_conn/connection.php");
-                   
+                   $available_tickets ="";
+                   $received_tickets ="";
                    $b_num= $_GET['b_number'];
                    
                     $q="SELECT * FROM `root` where b_number='$b_num' ";
                     $result=mysqli_query($connection,$q);
                            
                      while ($res=mysqli_fetch_assoc($result)){  
-                      
+
+                      $available_tickets = $res['avaiable_seats'];
+                       $received_tickets =$res['receiveticket'];
                ?>
                 <div class="mb-3">
                     <input type="hidden" name="b_number" value="<?php echo $res['b_number']; ?>">
@@ -110,17 +110,60 @@
                 </div>
 
                <button type="submit" class="btn btn-primary" name="contact" >Submit</button>
-              </div>
+             
          </form>
          </div>
-         </div>
-
+             <div class="col-4 lg-4 md-4 bg-light">
+                 <!-- <img src="../asset/img/photo.avif" class="img-fluid" alt="...">-->
+                 <div>
+                  <h3 class="text-center">Travel details</h3>
+                     </div>
+                  <div>
+                  <table>
+                   <tr>
+                    <td>
+                    Route:
+                    </td>
+                    <td><?php echo $res['r_source']?> - <?php echo $res['r_destinatin']?></td>
+                   </tr>
+                   <tr>
+                    <td>
+                    Date:
+                    </td>
+                    <td><?php echo $res['date']; ?></td>
+                   </tr>
+                   <tr>
+                    <td>
+                    price:
+                    </td>
+                    <td>Rs<?php echo $res['price']; ?></td>
+                   </tr>
+                   <tr>
+                    <td>
+                    Bus Number:
+                    </td>
+                    <td><?php echo $res['b_number']; ?></td>
+                   </tr>
+                   <tr>
+                    <td>
+                    Drive Number:
+                    </td>
+                    <td><?php echo $res['d_phone']; ?></td>
+                   </tr>
+                  </table>
+                  </div>
+                 
+                 </div>
+                 
                 </div>
-            </div>
-        </div>
+         </div>
     </section>
     <?php
+               $available_tickets--; // Decrease available tickets by 1
+               $received_tickets++; // Increase received tickets by 1
           }
+
+         
           include_once("../include/footer.php")
     ?>
     

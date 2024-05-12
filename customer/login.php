@@ -14,7 +14,8 @@
     <section>
         <div class="container d-flex justify-content-around">
             <div class="row">
-            <form action="lvalue.php" method="post"  class="p-5 m-5 " onsubmit=" return itsfunction()">
+            <form action="lvalue.php" method="post" id="search"  class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
+            <h1 class=" text-center text-dark"><a href="../index.php">Online Bus Service</a></h1>
             <h1 class=" text-center">User</h1>
           <div class="mb-3">
                <label for="username" class="form-label" > User Name</label>
@@ -27,9 +28,9 @@
          </div>
 
             <button type="submit" class="btn btn-warning" name="lsubmit" >sign-in</button>
-            <button  class="btn btn-warning mrg-5"><a href="register.php">sign-up</a></button>
+           <!-- <button  class="btn btn-warning mrg-5"><a href="register.php">sign-up</a></button>-->
             <div class="md-3">
-    	             new users<a href="register.php">login Here</a>
+    	             new users<a href="register.php">register Here</a>
       	    </div>
         </form>
             </div>

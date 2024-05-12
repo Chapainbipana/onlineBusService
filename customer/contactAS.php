@@ -5,50 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
-    <title>Online Bus service system</title>
+    <title>Online Bus Service</title>
 </head>
 <body>
 <body class="cbg-img"> 
      <section>
-         <div class="container d-flex justify-content-around ">
+         <div class="container ">
             <div class="row">
-            
-            
-             <form action="rvalue.php" method="post" class="p-5  m-5 shadow" id="search" onsubmit=" return itsfunction()">
-             
-             <!--<div class="align-center text-dark"> <h3><a href="../index.php"> OnlineBusService</a></h3>   </div>-->
-                
-           
-             <h1 class=" text-center">Register</h1>
+            <div class="col-7">
+             <form action="contactform.php" method="post" class="p-5  m-5 shadow" id="search" onsubmit=" return itsfunction()">
+             <h1  class="align-center" aria-hidden="true">contact</h1>
                 <div class="mb-3">
-                <label for="c_name" class="form-label">Customer Name:</label>
-                <input type="text" class="form-control" id="c_name" name="cname"  required >
+                <label for="c_name" class="form-label"> Name:</label>
+                <input type="text" class="form-control" id="c_name" name="name"  required >
                  
                 </div>
+                
                 <div class="mb-3">
-                 <label for="cpassword" class="form-label">Password:</label>
-                 <input type="password" class="form-control" id="cpassword" name="cpassword" required>
+                 <label for="caddress" class="form-label">subject:</label>
+                 <input type="text" class="form-control" id="caddress" name="subject"  required>
                 </div>
                 <div class="mb-3">
-                 <label for="caddress" class="form-label">address:</label>
-                 <input type="text" class="form-control" id="caddress" name="caddress"  required>
-                </div>
-                <div class="mb-3">
-                 <label for="cage" class="form-label">Age:</label>
-                 <input type="text" class="form-control" id="cage" name="cage"  pattern="[1-9]{2}" required>
+                 <label for="cage" class="form-label">Email Adress:</label>
+                 <input type="email" class="form-control" id="email" name="email"   required>
                 </div>
                 <div class="mb-3">
                  <label for="cphone" class="form-label">Phone:</label>
                  <input type="text" class="form-control" id="cphone" name="cphone" pattern="\d{10}" required>
                 </div>
+                <div class="mb-3">
+                 <label for="textarea" class="form-label">Message:</label>
+                 <textarea class="form-control" id="textarea" name="message" rows="3"></textarea>
+                </div>
           
-               <button type="submit" class="btn btn-primary" name="rsubmit" >Submit</button>
-               <div class="md-3">
-               Already have an account?<a href="login.php">Login </a>
-      	    </div>
+               <button type="submit" class="btn btn-primary" name="send" >Submit</button>
+              
          </form>
+         </div>
          
-         
+         <div class="col-5 agent-right">
+         </br>
+		</br>
+		</br>
+         <h3> <a class="text-dark" href="../index.php">Online Bus Service</a></h3>
+            <p>pokhara,Nepal</p>
+			<p><a href="mailto:bipanachapain@gmail.com">bipanachapain@gmail.com</a></p>
+			<p>+9779841034429</p>
+         </div>
          </div>
          </div>
      </section>

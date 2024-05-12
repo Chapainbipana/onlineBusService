@@ -92,8 +92,8 @@
                 <td><?php echo $res['address']; ?></td>
                 <td><?php echo $res['age']; ?></td>
                 <td><?php echo $res['phone']; ?></td>
-                <td><button><a href="customeredit.php?id=<?php echo $res['id'];?>">Edit</a></button></td>
-                <td><button><a href="customerdelete.php?id=<?php echo $res['id'];?>">Delete</a></button></td>
+                <td><button class="btn btn-warning"><a href="customeredit.php?id=<?php echo $res['id'];?>">Edit</a></button></td>
+                <td><button class="btn btn-danger"><a href="customerdelete.php?id=<?php echo $res['id'];?>">Delete</a></button></td>
               </tr>
             </tbody>
         <?php 
