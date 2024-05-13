@@ -29,10 +29,11 @@
                  <label for="cage" class="form-label">Email Adress:</label>
                  <input type="email" class="form-control" id="email" name="email"   required>
                 </div>
-                <div class="mb-3">
+               <!-- <div class="mb-3">
                  <label for="cphone" class="form-label">Phone:</label>
                  <input type="text" class="form-control" id="cphone" name="cphone" pattern="\d{10}" required>
                 </div>
+-->
                 <div class="mb-3">
                  <label for="textarea" class="form-label">Message:</label>
                  <textarea class="form-control" id="textarea" name="message" rows="3"></textarea>

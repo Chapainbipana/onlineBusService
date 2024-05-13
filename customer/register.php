@@ -14,7 +14,7 @@
             <div class="row">
             
             
-             <form action="rvalue.php" method="post" class="p-5  m-5 shadow" id="search" onsubmit=" return itsfunction()">
+             <form action="rvalue.php" method="post" class="p-5  m-5 shadow bg-light" id="search" onsubmit=" return itsfunction()">
              
              <!--<div class="align-center text-dark"> <h3><a href="../index.php"> OnlineBusService</a></h3>   </div>-->
                 

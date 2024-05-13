@@ -1,7 +1,11 @@
 <?php
-
-// Author : Samir Khanal
+session_start();
 $error_message = "";
+$amount ="";
+$uniqueProductId = "";
+$uniqueUrl = "";
+$uniqueProductName = "";
+$successRedirect = "";
 $khalti_public_key = "test_public_key_b0c99c8807db4e9a9d8e16e4ff84170c";
 
 // Run your code here to get your amount and product id and product url. Change this dynamically.
@@ -11,23 +15,29 @@ $khalti_public_key = "test_public_key_b0c99c8807db4e9a9d8e16e4ff84170c";
 // ------------------------------------------------------------------------
 
 
-$amount = 10;
-$uniqueProductId = "nike-shoes";
-$uniqueUrl = "http://localhost/OnlineBusServiceSystem/customer/";
-$uniqueProductName = "Nike shoes";
-$successRedirect = "/"; // change this url , it will be the page user will be redirected after successful payment
+include("../db_conn/connection.php");
+$b_num= $_SESSION['b_number'];
+//echo"$b_num";
+$q="SELECT * FROM `root` where b_number='$b_num' ";
+$result=mysqli_query($connection,$q);
+while ($res=mysqli_fetch_assoc($result)){
+$amount = $res["price"];
+$uniqueProductId = $res['r_source'].$res['r_destinatin'];
+$uniqueUrl = "http://localhost/OnlineBusServiceSystem/index.php";
+$uniqueProductName = "ticket";
+$successRedirect = "http://localhost/OnlineBusServiceSystem/customer/transaction.php"; // change this url , it will be the page user will be redirected after successful payment
 
-
+}
 // ------------------------------------------------------------------------
 // HINT : just change price above and redirect user to this page. It will handel everything automatically.
 // ------------------------------------------------------------------------
 
 function checkValid($data)
 {
-    $verifyAmount = 1000; // get amount from database and multiply by 100
+    $verifyAmount = ""; // get amount from database and multiply by 100
     // $data contains khalti response. you can print it to view more details.
     // eg. $data["token] will give token & $data["amount] will give amount and more. see khalti docs for response format
-    // $error_message="";
+  //  $error_message="";
     // show error from above message
     if ((float) $data["amount"] == $verifyAmount) {
         return 1;

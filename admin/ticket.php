@@ -43,8 +43,8 @@
               Root
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="addroot.php">Add Route</a></li>
-              <li><a class="dropdown-item" href="root.php">Route Display</a></li>
+              <li><a class="dropdown-item" href="addroot.php">Add Root</a></li>
+              <li><a class="dropdown-item" href="root.php">Root Display</a></li>
              
             </ul>
           </li>
@@ -56,56 +56,55 @@
       </div>
     </div>
   </nav>
-
-   <div class="title">
-       <h1>Customer Details</h1>
+  <div class="title">
+       <h1>Rececive ticket</h1>
        </div>
-    <div class="section">
-      <div class="container">
+    <div class="container">
         <div class="row">
-          <table class="table  table-striped table-hover table-bordered table-xl table-responsive-xl">
+            <div class="col-12 col-lg-12 col-md-12">
+            <table class="table  table-striped table-hover table-bordered table-xl table-responsive-xl">
             <thead>
               <tr>
-                <th>Id</th>
+                
                 <th>Name</th>
-                <th>Password</th>
-                <th>Address</th>
-                <th>Age</th>
-                <th>Phone</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                <th>Rececive Date</th>
+                <th>Price</th>
+                
+                <!--<th scope="col">Edit</th>-->
+                <!--<th scope="col">Delete</th>-->
               </tr>
             </thead>
-            <?php 
-            //$search=$_POST['search'];
-            include("../db_conn/connection.php");
-             $q="SELECT * FROM `customer_login`";
-             $result=mysqli_query($connection,$q);
-             while ($res=mysqli_fetch_assoc($result)){   
-     ?>
-            
             <tbody>
-              <tr>
-                <td><?php echo $res['id']; ?></td>
+
+            <?php
+         include("../db_conn/connection.php");
+          $b_num= $_GET['b_number'];
+          $q="SELECT * FROM `transactions` where b_number='$b_num' ";
+          $result=mysqli_query($connection,$q);
+          while ($res=mysqli_fetch_assoc($result)){  
+            ?>
+            <tr>
+                
+            
                 <td><?php echo $res['c_name'];?></td>
-                <td><?php echo $res['c_password'];?></td>
-                <td><?php echo $res['address']; ?></td>
-                <td><?php echo $res['age']; ?></td>
-                <td><?php echo $res['phone']; ?></td>
-                <td><button class="btn btn-warning"><a href="customeredit.php?id=<?php echo $res['id'];?>">Edit</a></button></td>
-                <td><button class="btn btn-danger"><a href="customerdelete.php?id=<?php echo $res['id'];?>">Delete</a></button></td>
+                <td><?php echo $res['date'];?></td>
+                <td>Rs <?php echo $res['price']; ?></td>
+                
               </tr>
-            </tbody>
-        <?php 
-   	   } ?>
-   	   
-          </table>
+          
+  
+  <?php
+  }
+  ?>
+  </tbody>
+            </table>
+            </div>
         </div>
-      </div>
     </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
-</html>
+
+
+  </body>
+  </html>
 <?php
      }
   else{

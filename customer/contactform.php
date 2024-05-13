@@ -19,7 +19,7 @@ if (isset($_POST["send"])) {
     $mail->Host       = 'smtp.gmail.com';       //Set the SMTP server to send through
     $mail->SMTPAuth   = true;             //Enable SMTP authentication
     $mail->Username   = 'chapai.bipana65@gmail.com';   //SMTP write your email
-    $mail->Password   = 'bipanachapain!';      //SMTP password
+    $mail->Password   = 'xemprvziwpsympce';      //SMTP password
     $mail->SMTPSecure = 'ssl';            //Enable implicit SSL encryption
     $mail->Port       = 465;                                    
 
@@ -38,6 +38,7 @@ if (isset($_POST["send"])) {
   " 
   <script> 
    alert('Message was sent successfully!');
+   window.location = '../index.php'
 
   </script>
   ";

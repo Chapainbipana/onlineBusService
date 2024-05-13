@@ -104,7 +104,7 @@ session_start();
         <div class="container ">
             <div class="row">
            
-              <h1>Root</h1>
+              <h1 class="text-center">Route</h1>
             
         <div class="container">
                 <div class="col-lg-12 col-md-12 col-12">

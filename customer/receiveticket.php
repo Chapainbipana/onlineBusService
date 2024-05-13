@@ -69,20 +69,22 @@
                 
                 <div class="col-5 lg-5 md-5">
                 
-             <form action="pay.php"  method="post" class="p-5   " >
+             <form action="transaction.php"  method="post" class="p-5   " >
              <h1  class="align-center" aria-hidden="true">Ticket Receive</h1>
              <?php
                    include("../db_conn/connection.php");
                    $available_tickets ="";
                    $received_tickets ="";
-                   $b_num= $_GET['b_number'];
+                   $b_number= $_GET['b_number'];
+                   $_SESSION['b_number']=$_GET['b_number'];
                    
-                    $q="SELECT * FROM `root` where b_number='$b_num' ";
+                    $q="SELECT * FROM `root` where b_number='$b_number' ";
                     $result=mysqli_query($connection,$q);
                            
                      while ($res=mysqli_fetch_assoc($result)){  
 
                       $available_tickets = $res['avaiable_seats'];
+                      echo $available_tickets;
                        $received_tickets =$res['receiveticket'];
                ?>
                 <div class="mb-3">
@@ -109,7 +111,7 @@
                  <input type="text" class="form-control" id="price" name="price" value="<?php echo $res['price']; ?>" placeholder="<?php echo $res['t_price']; ?>"  readonly  required>
                 </div>
 
-               <button type="submit" class="btn btn-primary" name="contact" >Submit</button>
+               <button type="submit" class="btn btn-primary" name="contact" >Payment</button>
              
          </form>
          </div>
@@ -161,6 +163,8 @@
     <?php
                $available_tickets--; // Decrease available tickets by 1
                $received_tickets++; // Increase received tickets by 1
+               $updatequery= "UPDATE `root` SET `avaiable_seats`='$available_tickets',`receiveticket`='$received_tickets' WHERE `b_number`='$b_number' ";
+               $thanQuery=mysqli_query($connection, $updatequery);
           }
 
          

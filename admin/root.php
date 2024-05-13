@@ -64,7 +64,7 @@
                 
                 <div class="col-lg-12 col-md-12 col-12">
                 <div class="title">
-              <h1>Root</h1>
+              <h1 class="text-center">Route</h1>
              </div>
                 <table class="table  table-striped table-hover table-bordered table-xl table-responsive-xl">
                 <thead>
@@ -76,7 +76,7 @@
                         <th scope="col">Destination</th>
                         <th scope="col">Price</th>
                         <th scope="col">Avaiable seats</th>
-                        <!--<th scope="col">Receive</th>-->
+                        <th scope="col">Receive Ticket</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>
@@ -94,8 +94,9 @@
                         <td><?php echo $res['d_phone']; ?></td>
                         <td><?php echo $res['r_source']; ?></td>
                         <td><?php echo $res['r_destinatin']; ?></td>
-                        <td><?php echo $res['price']; ?></td>
+                        <td>Rs <?php echo $res['price']; ?></td>
                         <td><?php echo $res['avaiable_seats']; ?></td>
+                        <td><button class="btn btn-success"><a href="ticket.php?b_number=<?php echo $res['b_number'];?>">Recevie</a></button></td>
                         <td><button class="btn btn-warning"><a href="editroot.php?b_number=<?php echo $res['b_number'];?>">Edit</a></button></td>
                         <td><button class="btn btn-danger"><a href="rootdelete.php?b_number=<?php echo $res['b_number'];?>">Delete</a></button></td>
                     </tr>

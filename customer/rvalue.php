@@ -18,7 +18,7 @@ if (isset($_POST['rsubmit'])) {
         $_SESSION['cpassword']=$cpassword;
         $query=mysqli_query($connection,$q);
           if($query){
-            header("location:index.php");
+            header("location:../index.php");
             }
             else{
              header("location:register.php");

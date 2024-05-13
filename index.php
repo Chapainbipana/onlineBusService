@@ -86,7 +86,7 @@ session_start();
               <a class="nav-link" href="customeredit.php"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="rootdisplay.php">Root View</a>
+              <a class="nav-link active" aria-current="page" href="rootdisplay.php">Route View</a>
             </li>
            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"

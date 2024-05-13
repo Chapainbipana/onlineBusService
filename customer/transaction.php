@@ -80,19 +80,25 @@
         $result=mysqli_query($connection,$q);
         
         //echo "error".$result."<br>".mysqli_error($connection);
-          while ($man = mysqli_fetch_assoc($result)) { 
-              $id = $man['id'];
-              echo"$id";
-              echo"hello";
-          }
+         // while ($man = mysqli_fetch_assoc($result)) { 
+           //   $id = $man['id'];
+             // echo"$id";
+             // echo"hello";
+        //  }
           echo"$id";
           ///echo "error".$result."<br>".mysqli_error($connection);
         $insertquery="INSERT INTO `transactions`(`b_number`, `date`,`c_name`, `price`) VALUES ('$b_number','$date','$c_name','$price')";
-        
         $query=mysqli_query($connection, $insertquery);
-        echo"$insertquery";
+        //echo"$insertquery";
         if($query){
-          
+        //  $query="SELECT * FROM `root` WHERE 'b_number' = '$b_number' ";
+         // $available=mysqli_query($connection, $insertquery);
+         // $row = mysqli_fetch_assoc($available);
+         // $available_tickets = $row['avaiable_seats'];
+         // $received_tickets = $row['receiveticket'];
+        //  $available_tickets--; // Decrease available tickets by 1
+        //  $received_tickets++; // Increase received tickets by 1
+        
       ?>
       <div class="section">
         <div class="container">
@@ -151,7 +157,7 @@
         -->
        <section>
       <div class="container">
-        <div class="row" style="height: 100px";>
+        <div class="row" style="height: 130px";>
           <div class="col-5"></div>
           <div class="col-5"></div>
           <div class="col-2"></div>

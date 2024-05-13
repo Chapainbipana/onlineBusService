@@ -92,7 +92,7 @@ while ($res=mysqli_fetch_assoc($result)){
                 <input type="number" class="form-control"  name="price" value="<?php echo $res['price']; ?>" required>
          </div>
          <div class="mb-3">
-                <label for="seat" class="form-label">Avaible seat</label>
+                <label for="seat" class="form-label">Available seat</label>
                 <input type="number" class="form-control"  name="avaible_seat" value="<?php echo $res['avaiable_seats']; ?>" required>
          </div>
          <div class="mb-3">
