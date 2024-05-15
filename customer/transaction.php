@@ -1,10 +1,6 @@
 <?php
    session_start();
-?>
-<?php
  if (isset($_SESSION['c_name'])&&$_SESSION['c_password']){
- 
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -89,15 +85,19 @@
           ///echo "error".$result."<br>".mysqli_error($connection);
         $insertquery="INSERT INTO `transactions`(`b_number`, `date`,`c_name`, `price`) VALUES ('$b_number','$date','$c_name','$price')";
         $query=mysqli_query($connection, $insertquery);
-        //echo"$insertquery";
-        if($query){
-        //  $query="SELECT * FROM `root` WHERE 'b_number' = '$b_number' ";
-         // $available=mysqli_query($connection, $insertquery);
-         // $row = mysqli_fetch_assoc($available);
-         // $available_tickets = $row['avaiable_seats'];
-         // $received_tickets = $row['receiveticket'];
-        //  $available_tickets--; // Decrease available tickets by 1
-        //  $received_tickets++; // Increase received tickets by 1
+       // echo"$insertquery";
+       if($query){
+          $query="SELECT * FROM `root` WHERE b_number= '$b_number' ";
+          $available=mysqli_query($connection, $query);
+          $row = mysqli_fetch_assoc($available);
+          $available_tickets = $row['avaiable_seats'];
+          $received_tickets = $row['receiveticket'];
+          $available_tickets--; // Decrease available tickets by 1
+          $received_tickets++; // Increase received tickets by 1
+        //  echo$available_tickets;
+         // echo$received_tickets;
+          $updatequery= "UPDATE `root` SET `avaiable_seats`='$available_tickets',`receiveticket`='$received_tickets' WHERE `b_number`='$b_number' ";
+              $thanQuery=mysqli_query($connection, $updatequery);
         
       ?>
       <div class="section">
@@ -148,10 +148,10 @@
        
       <?Php
         }
-        else {
+       // else {
           // header("location:addroot.php");
-          echo "error".$query."<br>".mysqli_error($connection);
-       }
+         // echo "error".$query."<br>".mysqli_error($connection);
+      // }
     ?>
 <!--
         -->

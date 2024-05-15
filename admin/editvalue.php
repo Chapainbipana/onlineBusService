@@ -12,8 +12,9 @@
     $destination = trim($_POST['destination']);
     $price = trim($_POST['price']);
     $seat = trim($_POST['avaible_seat']);
+    $receiveseat = trim($_POST['rseat']);
     $date = trim($_POST['date']);
-    $q="UPDATE `root` SET `b_number`='$b_num',`d_phone`='$b_phone',`r_source`='$source',`r_destinatin`='$destination',`price`='$price',`avaiable_seats`='$seat',`date`='$date'  WHERE `root`.`b_number` = '$b_num'";
+    $q="UPDATE `root` SET `b_number`='$b_num',`d_phone`='$b_phone',`r_source`='$source',`r_destinatin`='$destination',`price`='$price',`avaiable_seats`='$seat',`receiveticket`='$receiveseat',`date`='$date'  WHERE `root`.`b_number` = '$b_num'";
     $query=mysqli_query($connection,$q);
     if($query){
         header("location:root.php");

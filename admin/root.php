@@ -42,11 +42,11 @@
           </li><li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Root
+              Route
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="addroot.php">Add Root</a></li>
-             
+              <li><a class="dropdown-item" href="addroot.php">Add Route</a></li>
+              <li><a class="dropdown-item" href="root.php"> Route Display</a></li>
             </ul>
           </li>
         </ul>
@@ -77,6 +77,7 @@
                         <th scope="col">Price</th>
                         <th scope="col">Avaiable seats</th>
                         <th scope="col">Receive Ticket</th>
+                        <th scope="col">Book ticket</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>
@@ -96,7 +97,8 @@
                         <td><?php echo $res['r_destinatin']; ?></td>
                         <td>Rs <?php echo $res['price']; ?></td>
                         <td><?php echo $res['avaiable_seats']; ?></td>
-                        <td><button class="btn btn-success"><a href="ticket.php?b_number=<?php echo $res['b_number'];?>">Recevie</a></button></td>
+                        <td><?php echo $res['receiveticket']; ?></td>
+                        <td><button class="btn btn-success"><a href="ticket.php?b_number=<?php echo $res['b_number'];?>">view</a></button></td>
                         <td><button class="btn btn-warning"><a href="editroot.php?b_number=<?php echo $res['b_number'];?>">Edit</a></button></td>
                         <td><button class="btn btn-danger"><a href="rootdelete.php?b_number=<?php echo $res['b_number'];?>">Delete</a></button></td>
                     </tr>

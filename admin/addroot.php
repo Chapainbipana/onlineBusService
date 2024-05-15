@@ -97,6 +97,10 @@
                 <input type="number" class="form-control"  name="avaible_seat"  required>
          </div>
          <div class="mb-3">
+                <label for="seat" class="form-label">Rececive Ticket</label>
+                <input type="number" class="form-control"  name="receiveseat"  required>
+         </div>
+         <div class="mb-3">
                 <label for="date" class="form-label">Date</label>
                 <input type="date" class="form-control" id="date" name="date"  required>
          </div>

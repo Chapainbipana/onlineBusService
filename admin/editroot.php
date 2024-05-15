@@ -39,10 +39,11 @@
           </li><li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Root
+              Route
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="addroot.php">Add Root</a></li>
+              <li><a class="dropdown-item" href="addroot.php">Add Route</a></li>
+              <li><a class="dropdown-item" href="root.php">Display Route</a></li>
              
             </ul>
           </li>
@@ -68,7 +69,7 @@ while ($res=mysqli_fetch_assoc($result)){
   <div class="container d-flex justify-content-around">
     <div class="row">
     <form action="editvalue.php "  method="post" class="p-5  m-5 shadow">
-            <h1>Add Root</h1>
+            <h1>Edit Root</h1>
           <div class="mb-3">
                <label for="b_num" class="form-label">Bus Number:</label>
                <input type="text" class="form-control"  name="b_number" value="<?php echo $res['b_number']; ?>" required >
@@ -94,6 +95,10 @@ while ($res=mysqli_fetch_assoc($result)){
          <div class="mb-3">
                 <label for="seat" class="form-label">Available seat</label>
                 <input type="number" class="form-control"  name="avaible_seat" value="<?php echo $res['avaiable_seats']; ?>" required>
+         </div>
+         <div class="mb-3">
+                <label for="seat" class="form-label">Rececive seat</label>
+                <input type="number" class="form-control"  name="rseat" value="<?php echo $res['receiveticket']; ?>" required>
          </div>
          <div class="mb-3">
                 <label for="date" class="form-label">Date</label>
