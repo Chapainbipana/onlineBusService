@@ -13,11 +13,37 @@
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <title>Online Bus Service System</title>
     <style>
-
+      section{
+        padding-top: 100px;
+      }
+      .seating-chart {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .seat {
+            width: 30px;
+            height: 30px;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;*/
+            align-items: center;
+            /*justify-content: center;*/
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .seat:hover {
+            background-color: #45a049;
+        }
+        .seat.occupied {
+            background-color: #d9534f;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body class="cbg-img">
-<nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
         <i class="bi bi-bus-front">
@@ -69,7 +95,7 @@
                 
                 <div class="col-5 lg-5 md-5">
                 
-             <form action="pay.php"  method="post" class="p-5   " >
+             <form action="transaction.php"  method="post" class="p-5   " >
              <h1  class="align-center" aria-hidden="true">Ticket Receive</h1>
              <?php
                    include("../db_conn/connection.php");
@@ -104,8 +130,19 @@
                 </div>
                 <div class="mb-3">
                              <label for="cseat" class="form-label">Seat Number:</label>
-                             <input type="number" class="form-control" id="cseat" name="cseat" min="1" max="30"  required>
-                       </div>
+                            <!-- <input type="number" class="form-control" id="cseat" name="cseat" min="1" max="30"  required>
+                     -->     <?php
+                $totalSeats = 20; // Example: 20 seats
+                $seatsPerRow = 5; // Example: 5 seats per row
+                for ($i = 1; $i <= $totalSeats; $i++) {
+                    if ($i % $seatsPerRow == 1 && $i != 1) {
+                        echo "</div><div class='row'>";
+                    }
+                    echo "<div class='col-auto'><div class='seat' data-seat-number='$i'>$i</div></div>";
+                }
+            ?>
+
+                          </div>
                 <div class="mb-3">
                  <label for="cphone" class="form-label">Ticket price:</label>
                  <input type="text" class="form-control" id="price" name="price" value="<?php echo $res['price']; ?>" placeholder="<?php echo $res['t_price']; ?>"  readonly  required>
@@ -172,7 +209,20 @@
     ?>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
+    <script>
+        document.querySelectorAll('.seat').forEach(seat => {
+            seat.addEventListener('click', function() {
+                if (!seat.classList.contains('occupied')) {
+                    const seatNumber = seat.getAttribute('data-seat-number');
+                    
+                    seat.classList.add('occupied');
+                    alert(`Seat number ${seatNumber} is received`);
+                }
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  </body>
 </html>
 <?php
 }

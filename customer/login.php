@@ -14,7 +14,7 @@
     <section>
         <div class="container d-flex justify-content-around">
             <div class="row">
-            <form action="lvalue.php" method="post" id="search"  class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
+            <form action="lvalue.php" method="post" id="search"  class="p-5  m-5 bg-light shadow" onsubmit=" return itsfunction()">
             <h1 class=" text-center text-dark"><a href="../index.php">Online Bus Service</a></h1>
             <h1 class=" text-center">User</h1>
           <div class="mb-3">

@@ -16,6 +16,9 @@ session_start();
     <link rel="stylesheet" type="text/css" href="asset/css/style.css">
     <title>online bus service</title>
     <style>
+    .container{
+      padding-top: 100px;
+    }
       .footer {
     background-color: #343a40;
     color: #fff;
@@ -58,7 +61,7 @@ session_start();
 </head>
 <body class="bg-img" >
     
-<nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
         <i class="bi bi-bus-front">
@@ -106,7 +109,7 @@ session_start();
            
               <h1 class="text-center">Route</h1>
             
-        <div class="container">
+        
                 <div class="col-lg-12 col-md-12 col-12">
                 <table class="table  table-striped table-hover table-bordered table-xl table-responsive-xl">
                 <thead>
@@ -155,10 +158,11 @@ session_start();
               
               </table>               
                  </div>
-            </div>
+            
         </div>
         </div>
     </section>
+    
    <!-- <section>
       <div class="container">
         <div class="row" style="height: 140px";>
@@ -177,6 +181,16 @@ session_start();
       </div>
     </section>
                   -->
+                  <section>
+      <div class="container">
+        <div class="row" style="height: 130px";>
+          <div class="col-5"></div>
+          <div class="col-5"></div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </section>
+    
     <section>
 <div class="footer bg-secondary">
   <div class="row">

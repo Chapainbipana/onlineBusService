@@ -17,6 +17,7 @@ $khalti_public_key = "test_public_key_b0c99c8807db4e9a9d8e16e4ff84170c";
 
 include("../db_conn/connection.php");
 $b_num= $_SESSION['b_number'];
+
 //echo"$b_num";
 $q="SELECT * FROM `root` where b_number='$b_num' ";
 $result=mysqli_query($connection,$q);

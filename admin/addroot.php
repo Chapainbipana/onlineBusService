@@ -57,9 +57,9 @@
     </div>
   </nav>
 <?php 
-     //include '../db_conn/connection.php';
-           //  $q="SELECT * FROM `bus_info`";
-            // $result=mysqli_query($connection,$q);
+     include '../db_conn/connection.php';
+            $q="SELECT * FROM `bus_info`";
+           $result=mysqli_query($connection,$q);
             
             
             ?>
@@ -72,7 +72,15 @@
             <h1>Add Root</h1>
           <div class="mb-3">
                <label for="b_num" class="form-label">Bus Number:</label>
-               <input type="text" class="form-control"  name="b_number" required >
+               <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="b_number">
+                              <?php
+                              while ($source_res=mysqli_fetch_assoc($results)){   
+     ?>     
+                              <option value="<?php echo $source_res['b_number']?>"><?php echo $source_res['b_number']; ?></option>
+                              <?php
+                              }
+                              ?>
+                              </select> 
                 
           </div>
           <div class="mb-3">

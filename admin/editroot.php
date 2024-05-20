@@ -102,7 +102,7 @@ while ($res=mysqli_fetch_assoc($result)){
          </div>
          <div class="mb-3">
                 <label for="date" class="form-label">Date</label>
-                <input type="dateime" class="form-control" id="date" name="date" value="<?php echo $res['date']; ?>"  required>
+                <input type="dateTime" class="form-control" id="date" name="date" min="<?php echo date('Y-m-d'); ?>" value="<?php echo $res['date']; ?>"  required>
          </div>
          <div class="mb-3">
                    <button type="submit" class="btn btn-primary" name="editroot" >Submit</button>

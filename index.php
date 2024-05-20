@@ -12,6 +12,9 @@ session_start();
       <link rel="stylesheet" type="text/css" href="asset/css/style.css">
     <title>Online Bus Service</title>
     <style>
+      .container{
+        padding-top: 100px;
+      }
       .form-control{
         margin: 5px;
        
@@ -68,7 +71,7 @@ session_start();
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
         <i class="bi bi-bus-front">
@@ -120,6 +123,7 @@ session_start();
         </div>
       </div>
 </nav>
+
     <div class="container">
       <div><h3 class="text-center">Online Bus Ticket</h3></div>
       <div class="row row justify-content-center">
