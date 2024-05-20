@@ -7,7 +7,15 @@
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <title>Online Bus Service System</title>
     <style>
-        
+        .bg-img{
+    background-image: url(../asset/img/bus4.jpg);
+    background-repeat: no-repeat;
+   background-position: center;
+    /*background-color: lightslategray;*/
+    max-width: 100%;
+    background-size: cover;
+   /* height: auto;  */ 
+}
     </style>
 </head>
 <body class="bg-img">

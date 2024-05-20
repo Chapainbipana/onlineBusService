@@ -8,13 +8,22 @@
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <title>Online Bus Service</title>
     <style>
+        .abg-img{
+    background-image: url(../asset/img/bus3.jpg);
+    background-repeat: no-repeat;
+   background-position: center;
+    /*background-color: lightslategray;*/
+    max-width: 100%;
+    background-size: cover;
+   /* height: auto;  */ 
+}
        </style>
 </head>
-<body class="bg-img">
+<body class="abg-img">
      
     <section>
         <div class="container d-flex justify-content-around ">
-        <form action="avalue.php" method="post"  class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
+        <form action="avalue.php" method="post"  class="p-5  m-5 shadow" id="search" onsubmit=" return itsfunction()">
             <h1>Admin</h1>
           <div class="mb-3">
                <label for="username" class="form-label">User Name</label>

@@ -13,10 +13,11 @@
     $price = trim($_POST['price']);
     $seat = trim($_POST['avaible_seat']);
     $date = trim($_POST['date']);
-    $q="INSERT INTO `root`(`b_number`, `d_phone`, `r_source`, `r_destinatin`, `price`, `avaiable_seats`, `date`) VALUES ($b_num,$b_phone,$source,$destination,$price,$seat,$date)";
+    $q="INSERT INTO `root`(`b_number`, `d_phone`, `r_source`, `r_destinatin`, `price`, `avaiable_seats`, `date`) VALUES ('$b_num','$b_phone','$source','$destination','$price','$seat','$date')";
+    //echo"$q";
     $query=mysqli_query($connection,$q);
     if($query){
-       // header("location:root.php");
+        header("location:root.php");
     } 
     else {
        // header("location:addroot.php");

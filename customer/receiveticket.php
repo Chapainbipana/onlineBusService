@@ -95,7 +95,7 @@
                 
                 <div class="col-5 lg-5 md-5">
                 
-             <form action="transaction.php"  method="post" class="p-5   " >
+             <form action="pay.php"  method="post" class="p-5   " >
              <h1  class="align-center" aria-hidden="true">Ticket Receive</h1>
              <?php
                    include("../db_conn/connection.php");
@@ -130,18 +130,18 @@
                 </div>
                 <div class="mb-3">
                              <label for="cseat" class="form-label">Seat Number:</label>
-                            <!-- <input type="number" class="form-control" id="cseat" name="cseat" min="1" max="30"  required>
-                     -->     <?php
-                $totalSeats = 20; // Example: 20 seats
-                $seatsPerRow = 5; // Example: 5 seats per row
-                for ($i = 1; $i <= $totalSeats; $i++) {
-                    if ($i % $seatsPerRow == 1 && $i != 1) {
-                        echo "</div><div class='row'>";
-                    }
-                    echo "<div class='col-auto'><div class='seat' data-seat-number='$i'>$i</div></div>";
-                }
+                             <input type="number" class="form-control" id="cseat" name="cseat" min="1" max="30"  required>
+                         <?php
+               // $totalSeats = 20; // Example: 20 seats
+               // $seatsPerRow = 5; // Example: 5 seats per row
+               // for ($i = 1; $i <= $totalSeats; $i++) {
+                  //  if ($i % $seatsPerRow == 1 && $i != 1) {
+                   //     echo "</div><div class='row'>";
+                    //}
+                   // echo "<div class='col-auto'><div class='seat' data-seat-number='$i'>$i</div></div>";
+              //  }
             ?>
-
+   
                           </div>
                 <div class="mb-3">
                  <label for="cphone" class="form-label">Ticket price:</label>

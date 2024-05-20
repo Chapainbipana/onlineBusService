@@ -74,7 +74,7 @@
                <label for="b_num" class="form-label">Bus Number:</label>
                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="b_number">
                               <?php
-                              while ($source_res=mysqli_fetch_assoc($results)){   
+                              while ($source_res=mysqli_fetch_assoc($result)){   
      ?>     
                               <option value="<?php echo $source_res['b_number']?>"><?php echo $source_res['b_number']; ?></option>
                               <?php

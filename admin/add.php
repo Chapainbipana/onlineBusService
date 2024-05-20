@@ -12,11 +12,21 @@
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <title>Online Bus Service</title>
     <style>
+      .bg-img{
+    background-image: url(../asset/img/bus3.jpg);
+    background-repeat: no-repeat;
+   background-position: center;
+    /*background-color: lightslategray;*/
+    max-width: 100%;
+    background-size: cover;
+   /* height: auto;  */ 
+       }
+
       </style>
 </head>
 <body class="bg-img">
   
-<nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning shadow">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.php">Online Bus service</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -61,18 +71,8 @@
 <section>
   <div class="container d-flex justify-content-around">
     <div class="row">
-     <div class="col-4">
-      <br>
-      <br>
-      <br>
-     <img src="../asset/img/photo.avif" class="img-fluid" alt="...">
-      </div>
-      
-     
-     
-     
-     <div class="col-8">
-    <form action="busvalue.php " method="post"  class="p-5  m-5 shadow">
+     <div class="col-12 md-6 lg-12">
+    <form action="busvalue.php " method="post"  class="p-5 bg-white m-5 shadow">
             <h1>Add Bus</h1>
           <div class="mb-3">
                <label for="b_num" class="form-label">Bus Number</label>

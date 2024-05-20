@@ -6,6 +6,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <title>Online Bus service system</title>
+    <style>
+         .cbg-img{
+    background-image: url(../asset/img/bus4.jpg);
+    background-repeat: no-repeat;
+   background-position: center;
+    /*background-color: lightslategray;*/
+    max-width: 100%;
+    background-size: cover;
+   /* height: auto;  */ 
+}
+    </style>
 </head>
 <body>
 <body class="cbg-img"> 

@@ -17,7 +17,7 @@ session_start();
     <title>online bus service</title>
     <style>
     .container{
-      padding-top: 100px;
+      padding-top: 70px;
     }
       .footer {
     background-color: #343a40;
@@ -56,7 +56,15 @@ session_start();
   th,td{
     padding: 70px;
   }
-
+  .bg-img{
+background-image: url(asset/img/photo.avif);
+background-repeat: no-repeat;
+background-position: center; 
+background-color: lightslategray;
+background-size: cover;
+/*max-width: 100%;
+height: auto;*/
+  }
     </style>
 </head>
 <body class="bg-img" >

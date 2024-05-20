@@ -14,11 +14,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <title>Online Bus Service System</title>
+    <style>
+       .cbg-img{
+    background-image: url(../asset/img/bus3.jpg);
+    background-repeat: no-repeat;
+   background-position: center;
+    /*background-color: lightslategray;*/
+    max-width: 100%;
+    background-size: cover;
+   /* height: auto;  */ 
+       }
+    </style>
 </head>
+
 <body>
 <body class="cbg-img"> 
         
- <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+ <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning shadow">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.php">Online Bus service</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -65,7 +77,7 @@
      <section>
          <div class="container d-flex justify-content-around ">
             <div class="row">
-             <form action="customereditvalue.php"  method="post"  class="p-5  m-5 shadow" onsubmit=" return itsfunction()">
+             <form action="customereditvalue.php"  method="post"  class="p-5 bg-white m-5 shadow" onsubmit=" return itsfunction()">
              <h1  class="align-center" aria-hidden="true"> Edit customer</h1>
                 <div class="mb-3">
                     <input type="hidden" name="id" value="<?php echo $res['id']; ?>">

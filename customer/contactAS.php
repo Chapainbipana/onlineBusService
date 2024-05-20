@@ -6,11 +6,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
     <title>Online Bus Service</title>
+    <style>
+      .contianer{
+        padding-top: 50px;
+      }
+      .cbg-img{
+    background-image: url(../asset/img/onlineseats.webp);
+    background-repeat: no-repeat;
+   background-position: center;
+    /*background-color: lightslategray;*/
+    max-width: 100%;
+    background-size: cover;
+   /* height: auto;  */ 
+}
+    
+    </style>
 </head>
 <body>
 <body class="cbg-img"> 
     
-<nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
         <i class="bi bi-bus-front">
