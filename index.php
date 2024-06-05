@@ -112,8 +112,8 @@ session_start();
                 Account
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="customer/login.php">login</a></li>
-                <li><a class="dropdown-item" href="customer/register.php">Register</a></li>
+                <li><a class="dropdown-item" href="customer/login.php">user</a></li>
+                <li><a class="dropdown-item" href="admin/admin.php">Admin</a></li>
               </ul>
             </li>
           <form class="d-flex">

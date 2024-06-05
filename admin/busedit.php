@@ -95,7 +95,7 @@ height: auto;*/
          </div>
          <div class="mb-3">
                 <label for="b_destination" class="form-label">Avaiable Seats</label>
-                <input type="text" class="form-control"  name="seat" value="<?php echo $res['avaiable_seat']; ?>" required>
+                <input type="text" class="form-control" pattern="\d" name="seat" value="<?php echo $res['avaiable_seat']; ?>" required>
          </div>
         
          

@@ -66,6 +66,10 @@
     <script>
         function itsfunction(){
             var password=document.getElementById("cpassword").value;
+            var name=document.getElementById("c_name").value;
+           // alert(name);
+            var Namematch="/[a-z+\s]+$/g";
+             alert(Namematch);
             var age=document.getElementById("cage").value;
             var regp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&*?\~]).{5,16}/
             var rega=/^\d{1,2}/
@@ -74,6 +78,15 @@
             }
             else{
                 alert("invalid password");
+                return false;
+            }
+
+            if(name.match(Namematch)){
+                alert("valid Name");
+                return true;
+            }
+            else{
+                alert("invalid Name");
                 return false;
             }
         }

@@ -40,11 +40,11 @@
           </li><li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Root
+              Route
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="addroot.php">Add Root</a></li>
-              <li><a class="dropdown-item" href="root.php"> Root Display</a></li>
+              <li><a class="dropdown-item" href="addroot.php">Add Route</a></li>
+              <li><a class="dropdown-item" href="root.php"> Route Display</a></li>
              
             </ul>
           </li>
@@ -98,7 +98,7 @@
          </div>
          <div class="mb-3">
                 <label for="price" class="form-label">price</label>
-                <input type="number" class="form-control"  name="price"  required>
+                <input type="number" class="form-control"  name="price" pattern="[1-9]" required>
          </div>
          <div class="mb-3">
                 <label for="seat" class="form-label">Available seat</label>
@@ -110,7 +110,7 @@
          </div>
          <div class="mb-3">
                 <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="date" name="date"  required>
+                <input type="datetime-local" class="form-control" id="date" name="date" min="<?php echo 'y-m-dT00:00';?>"  required>
          </div>
          <div class="mb-3">
                    <button type="submit" class="btn btn-primary" name="addroot" >Submit</button>

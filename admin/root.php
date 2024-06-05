@@ -75,7 +75,8 @@
                         <th scope="col">Source</th>
                         <th scope="col">Destination</th>
                         <th scope="col">Price</th>
-                        <th scope="col">Avaiable seats</th>
+                        <th scope="col">Total seats</th>
+                        <th scope="col">Available seats</th>
                         <th scope="col">Receive Ticket</th>
                         <th scope="col">Book ticket</th>
                         <th scope="col">Edit</th>
@@ -96,6 +97,7 @@
                         <td><?php echo $res['r_source']; ?></td>
                         <td><?php echo $res['r_destinatin']; ?></td>
                         <td>Rs <?php echo $res['price']; ?></td>
+                        <td><?php echo $res['totalseats']; ?></td>
                         <td><?php echo $res['avaiable_seats']; ?></td>
                         <td><?php echo $res['receiveticket']; ?></td>
                         <td><button class="btn btn-success"><a href="ticket.php?b_number=<?php echo $res['b_number'];?>">view</a></button></td>

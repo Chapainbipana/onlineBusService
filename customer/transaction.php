@@ -76,11 +76,11 @@
         $result=mysqli_query($connection,$q);
         
         //echo "error".$result."<br>".mysqli_error($connection);
-         // while ($man = mysqli_fetch_assoc($result)) { 
-           //   $id = $man['id'];
-             // echo"$id";
-             // echo"hello";
-        //  }
+         while ($man = mysqli_fetch_assoc($result)) { 
+             $id = $man['id'];
+             echo"$id";
+             echo"hello";
+         }
           echo"$id";
           ///echo "error".$result."<br>".mysqli_error($connection);
         $insertquery="INSERT INTO `transactions`(`b_number`, `date`,`c_name`, `price`) VALUES ('$b_number','$date','$c_name','$price')";
@@ -142,6 +142,10 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="buttons">
+                    <button onclick="window.print()" class="btn btn-primary">Print</button>
+                    
+                </div>
             </div>
         </div>
        </div>

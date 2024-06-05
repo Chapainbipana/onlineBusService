@@ -110,8 +110,8 @@
                      while ($res=mysqli_fetch_assoc($result)){  
 
                      // $available_tickets = $res['avaiable_seats'];
-                    //  echo $available_tickets;
-                    //   $received_tickets =$res['receiveticket'];
+                     //echo $available_tickets;
+                     // $received_tickets =$res['receiveticket'];
                ?>
                 <div class="mb-3">
                     <input type="hidden" name="b_number" value="<?php echo $res['b_number']; ?>">
@@ -130,18 +130,16 @@
                 </div>
                 <div class="mb-3">
                              <label for="cseat" class="form-label">Seat Number:</label>
-                             <input type="number" class="form-control" id="cseat" name="cseat" min="1" max="30"  required>
-                         <?php
-               // $totalSeats = 20; // Example: 20 seats
-               // $seatsPerRow = 5; // Example: 5 seats per row
-               // for ($i = 1; $i <= $totalSeats; $i++) {
-                  //  if ($i % $seatsPerRow == 1 && $i != 1) {
-                   //     echo "</div><div class='row'>";
-                    //}
-                   // echo "<div class='col-auto'><div class='seat' data-seat-number='$i'>$i</div></div>";
-              //  }
-            ?>
-   
+                             <input type="number" class="form-control" id="cseat"  min="1" max="30"  required>
+                            
+                    <div class="seating-chart">
+                    <?php
+                    $totalSeats =  $res['totalseats']; // Example: 20 seats
+                    for ($i = 1; $i <= $totalSeats; $i++) {
+                        echo "<div class='seat' name='cseat' data-seat-number='$i'>$i</div>";
+                    }
+                    ?>
+    </div>
                           </div>
                 <div class="mb-3">
                  <label for="cphone" class="form-label">Ticket price:</label>
@@ -222,6 +220,7 @@
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
   </body>
 </html>
 <?php

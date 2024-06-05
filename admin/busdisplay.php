@@ -41,11 +41,11 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Root
+              Route
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="addroot.php">Add Root</a></li>
-              <li><a class="dropdown-item" href="root.php">Root Display</a></li>
+              <li><a class="dropdown-item" href="addroot.php">Add Route</a></li>
+              <li><a class="dropdown-item" href="root.php">Route Display</a></li>
              
             </ul>
           </li>
@@ -68,7 +68,8 @@
                         <th scope="col">Bus Number</th>
                         <th scope="col">Phone</th>
                         <th scope="col">DriveName</th>
-                        <th scope="col">Avaiable Seats</th>
+                        
+                        <th scope="col">Available Seats</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>
