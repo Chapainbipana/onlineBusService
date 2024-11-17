@@ -130,7 +130,7 @@
                 </div>
                 <div class="mb-3">
                              <label for="cseat" class="form-label">Seat Number:</label>
-                             <input type="number" class="form-control" id="cseat"  min="1" max="30"  required>
+                          <!--   <input type="number" class="form-control" id="cseat"  min="1" max="30"  required>-->
                             
                     <div class="seating-chart">
                     <?php

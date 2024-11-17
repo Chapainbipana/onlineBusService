@@ -69,7 +69,7 @@
             var name=document.getElementById("c_name").value;
            // alert(name);
             var Namematch="/[a-z+\s]+$/g";
-             alert(Namematch);
+             //alert(Namematch);
             var age=document.getElementById("cage").value;
             var regp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&*?\~]).{5,16}/
             var rega=/^\d{1,2}/

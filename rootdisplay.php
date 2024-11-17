@@ -124,12 +124,12 @@ height: auto;*/
                     <tr>
                         <th scope="col">Bus Number</th>
                         <th scope="col">Date</th>
-                        <th scope="col">Drive Number</th>
+                        <th scope="col">Driver Number</th>
                         <th scope="col">Source</th>
                         <th scope="col">Destination</th>
                         
                         <th scope="col">Ticket Price</th>
-                        <th scope="col">Avaiable seats</th>
+                        <th scope="col">Available seats</th>
                         <th scope="col">Receive Ticket</th>
                         
                     </tr>
